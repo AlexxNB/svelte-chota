@@ -1,0 +1,5 @@
+body,html {
+	color: var(--color-svelte-dark);
+	height: 100%;
+	margin: 0px;
+}

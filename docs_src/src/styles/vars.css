@@ -1,0 +1,9 @@
+:root {
+	--font-family: "Overpass", sans-serif;
+
+	--color-svelte-dark: #4a4a55;
+	--color-svelte-primary: #ff3e00;
+	--color-svelte-secondary: #676778;
+	--color-svelte-gray: #c9c9cf;
+	--color-svelte-highlight: #40b3ff;
+}
