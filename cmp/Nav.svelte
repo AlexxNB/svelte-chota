@@ -25,3 +25,9 @@
 	</div>
 {/if}
 </nav>
+
+<style>
+	nav{
+		width:100%;
+	}
+</style>
