@@ -1,20 +1,11 @@
 {
   "name": "svelte-chota",
-  "svelte": "cmp/_index.svelte",
-  "module": "index.mjs",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c",
-    "prepublishOnly": "npm run build",
     "docs-dev": "cd ./docs_src && npm run dev",
     "docs-build": "cd ./docs_src && npm run build && cp ./public/* ./../docs/"
   },
-  "devDependencies": {
-    "rollup": "^1.11.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-svelte": "^5.0.0",
-    "svelte": "^3.0.0"
-  },
+  "devDependencies": {},
   "keywords": [
     "svelte"
   ],

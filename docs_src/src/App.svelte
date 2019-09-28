@@ -1,16 +1,15 @@
 <script>
-	export let name;
+	import {Nav} from './../../index.js'
 </script>
 
 <style>
-	:root {
+	:global(:root) {
 		--font-family: "Overpass", sans-serif;
-	}
-	h1 {
-		color: var(--color-error);
 	}
 </style>
 
-<h1>Hello {name}!</h1>
-
-Тестовая запись Svelte
+<Nav>
+	<div slot="left">Left</div>
+	<div slot="center">Center</div>
+	<div slot="right">Right</div>
+</Nav>
