@@ -12,6 +12,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "chota": "^0.7.1",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {

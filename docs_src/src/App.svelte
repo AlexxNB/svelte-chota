@@ -3,9 +3,14 @@
 </script>
 
 <style>
+	:root {
+		--font-family: "Overpass", sans-serif;
+	}
 	h1 {
-		color: purple;
+		color: var(--color-error);
 	}
 </style>
 
 <h1>Hello {name}!</h1>
+
+Тестовая запись Svelte
