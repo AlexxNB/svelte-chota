@@ -1,4 +1,5 @@
 import "chota";
+import "highlight.js/styles/rainbow.css";
 import "./styles/fonts.css";
 
 import App from './App.svelte';

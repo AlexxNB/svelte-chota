@@ -8,7 +8,7 @@ $: hl_code = hljs.highlight('html',code.trim());
 
 <div>
 	<div class="result"><slot></slot></div>
-	<div class="code">
+	<div class="hljs">
 		{@html hl_code.value}
 	</div>
 </div>
