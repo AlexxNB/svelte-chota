@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "docs-dev": "cd ./docs_src && npm run dev",
+    "docs-build": "cd ./docs_src && npm run build && cp ./public/* ./../docs/"
   },
   "devDependencies": {
     "rollup": "^1.11.0",
