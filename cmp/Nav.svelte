@@ -1,14 +1,14 @@
 <script>
-    console.log($$props);
-
-    console.log($$props.$$slots);
+	import {getClassAttr} from './utils';
 
     let is_left = ($$props.$$slots.left !== undefined);
     let is_center = ($$props.$$slots.center !== undefined);
-    let is_right = ($$props.$$slots.right !== undefined);
+	let is_right = ($$props.$$slots.right !== undefined);
+	
+	$: classAttr = getClassAttr('nav',$$props.class);
 </script>
 
-<nav class="nav">
+<nav class="{classAttr}">
 {#if is_left}
 	<div class="nav-left">
 		<slot name="left"></slot>
