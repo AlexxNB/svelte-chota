@@ -33,6 +33,7 @@ $: hl_code = hljs.highlight('html',code.trim());
 	border-radius: 5px;
 	font-size: 1.2rem;
 	line-height: 1.2rem;
+	margin:0px;
 }
 
 

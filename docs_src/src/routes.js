@@ -1,6 +1,7 @@
 import Why_chota from './pages/why_chota.svelte';
 import Install from './pages/install.svelte';
 import Nav from './pages/nav.svelte';
+import Grid from './pages/grid.svelte';
 
 const document = [
 	['Getting Started'],
@@ -8,6 +9,7 @@ const document = [
 		['Installation','install',Install],
 	['Components'],
 		['Nav','nav',Nav],
+		['Grid','grid',Grid],
 ];
 
 export function getSections() {
