@@ -1,6 +1,5 @@
 <script>
     import {getSections} from './../routes';
-    console.log(getSections());
 </script>
 <div>
     <ul>

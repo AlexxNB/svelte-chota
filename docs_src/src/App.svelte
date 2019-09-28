@@ -9,7 +9,7 @@
 	<div class="content"><Docs/></div>
 	<div class="nav">
 		<Nav>
-			<div slot="left"><h1>SVELTE<span class="text-light">-</span><span class="text-primary">chota</span></h1></div>
+			<h1 slot="left">SVELTE<span class="text-light">-</span><span class="text-primary">chota</span></h1>
 			<div slot="right">Github</div>
 		</Nav>
 	</div>
@@ -32,7 +32,7 @@
 
 	.nav { 
 		grid-area: nav; 
-		box-shadow: 0 8px 8px -8px var(--color-svelte-dark);
+		box-shadow: 0 0 15px -5px var(--color-svelte-dark);
 
 	}
 	.sections { grid-area: sections;}
