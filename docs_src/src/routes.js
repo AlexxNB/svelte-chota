@@ -4,6 +4,7 @@ import Nav from './pages/nav.svelte';
 import Grid from './pages/grid.svelte';
 import Buttons from './pages/buttons.svelte';
 import Tabs from './pages/tabs.svelte';
+import Card from './pages/card.svelte';
 
 const document = [
 	['Getting Started'],
@@ -14,6 +15,7 @@ const document = [
 		['Grid','grid',Grid],
 		['Buttons','buttons',Buttons],
 		['Tabs','tabs',Tabs],
+		['Card','card',Card],
 ];
 
 export function getSections() {
