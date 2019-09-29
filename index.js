@@ -7,6 +7,7 @@ import Tab from './cmp/Tab.svelte';
 import Card from './cmp/Card.svelte';
 import Tag from './cmp/Tag.svelte';
 import Details from './cmp/Details.svelte';
+import Input from './cmp/Input.svelte';
 
 export {
     Nav,
@@ -16,4 +17,5 @@ export {
     Card,
     Tag,
     Details,
+    Input,
 }
