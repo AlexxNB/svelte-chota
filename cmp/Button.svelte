@@ -41,7 +41,7 @@
 
     {disabled}
 
-    on:*
+    on:click
 >
 {#if icon} <span class="lefticon"> <Icon path={icon} size="1.4"/> </span>{/if}
 <slot></slot>
