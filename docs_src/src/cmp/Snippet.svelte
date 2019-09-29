@@ -7,8 +7,6 @@ import {Row,Col} from './../../../index';
 
 export let code = '';
 
-console.log($$props.$$slots.default);
-
 $: hl_code = hljs.highlight('html',code.trim());
 </script>
 
