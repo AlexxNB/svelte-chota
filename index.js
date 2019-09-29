@@ -6,6 +6,7 @@ import Tabs from './cmp/Tabs.svelte';
 import Tab from './cmp/Tab.svelte';
 import Card from './cmp/Card.svelte';
 import Tag from './cmp/Tag.svelte';
+import Details from './cmp/Details.svelte';
 
 export {
     Nav,
@@ -14,4 +15,5 @@ export {
     Tabs, Tab,
     Card,
     Tag,
+    Details,
 }
