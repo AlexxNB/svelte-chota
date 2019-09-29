@@ -1,5 +1,6 @@
 <script>
     import {getClassAttr} from './utils';
+    import Card from './Card.svelte';
     import Icon from 'mdi-svelte';
 
     export let outline = null;
@@ -13,6 +14,7 @@
     export let icon = null;
     export let iconRight = null;
 
+    export let dropdown = false;
     export let disabled = false;
 
     const hasSlot = ($$props.$$slots !== undefined);
@@ -24,6 +26,7 @@
 </script>
 
 
+{#if dropdown === false}
 <button  
     class="{classAttr}"
 
@@ -47,6 +50,34 @@
 <slot></slot>
 {#if iconRight} <span class="righticon"> <Icon path={iconRight} size="1.4"/> </span>{/if}
 </button>
+{:else}
+  <details class="dropdown">
+    <summary  
+        class="{classAttr}"
+
+        class:outline
+        class:primary
+        class:secondary
+        class:dark
+        class:error
+        class:success
+        class:clear
+        class:loading
+        
+        class:icon={clIcon}
+        class:icon-only={clIcononly}
+
+        {disabled}
+
+        on:click
+    >
+    {#if icon} <span class="lefticon"> <Icon path={icon} size="1.4"/> </span>{/if}
+      {dropdown}
+    {#if iconRight} <span class="righticon"> <Icon path={iconRight} size="1.4"/> </span>{/if}
+    </summary>
+    <Card><slot></slot></Card>
+  </details>
+{/if}
 
 
 <style>

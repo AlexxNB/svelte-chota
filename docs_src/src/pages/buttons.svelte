@@ -1,8 +1,8 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Button} from './../../../index';
+    import {Button,Tag,Row,Col} from './../../../index';
 
-    import { mdiDelete,mdiAccountPlus,mdiSend } from '@mdi/js'; 
+    import { mdiDelete,mdiAccountPlus,mdiSend,mdiChevronDown } from '@mdi/js'; 
 </script>
 
 <h1>Buttons</h1>
@@ -75,4 +75,49 @@ As example, you can use <a target="_blank"  href="https://www.npmjs.com/package/
     <Button loading error>Loading</Button>
     <Button disabled>Disabled</Button>
     <Button primary disabled>Disabled</Button>
+</Snippet>
+
+
+<h3>Dropdown button</h3>
+
+<Snippet code={`
+<script>
+    import { mdiChevronDown } from '@mdi/js';
+</script>
+
+<Button dropdown="My Profile" outline iconRight={mdiChevronDown}>
+    <p><a href="/">Edit</a></p>
+    <p><a href="/">Alerts&nbsp;<Tag>3</Tag></a></p>
+    <hr>
+    <p><a href="/" class="text-error">Logout</a></p>
+</Button>
+
+<Button dropdown="Login" outline>
+    <Row>
+        <Col size="12"><input placeholder="username"></Col>
+        <Col size="12"><input placeholder="password" type="password"></Col>
+        <Col size="12" class="is-right">
+            <Button clear>Sign up</Button>
+            <Button primary>Sign in</Button>
+        </Col>
+    </Row>
+</Button>
+`}>
+    <Button dropdown="My Profile" outline iconRight={mdiChevronDown}>
+        <p><a href="/">Edit</a></p>
+        <p><a href="/">Alerts&nbsp;<Tag>3</Tag></a></p>
+        <hr>
+        <p><a href="/" class="text-error">Logout</a></p>
+    </Button>
+
+    <Button dropdown="Login" outline>
+        <Row>
+            <Col size="12"><input placeholder="username"></Col>
+            <Col size="12"><input placeholder="password" type="password"></Col>
+            <Col size="12" class="is-right">
+                <Button clear>Sign up</Button>
+                <Button primary>Sign in</Button>
+            </Col>
+        </Row>
+    </Button>
 </Snippet>
