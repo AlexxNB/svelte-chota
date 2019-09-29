@@ -5,6 +5,7 @@ import Grid from './pages/grid.svelte';
 import Buttons from './pages/buttons.svelte';
 import Tabs from './pages/tabs.svelte';
 import Card from './pages/card.svelte';
+import Tag from './pages/tag.svelte';
 
 const document = [
 	['Getting Started'],
@@ -16,6 +17,7 @@ const document = [
 		['Buttons','buttons',Buttons],
 		['Tabs','tabs',Tabs],
 		['Card','card',Card],
+		['Tag','tag',Tag],
 ];
 
 export function getSections() {

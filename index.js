@@ -5,6 +5,7 @@ import Button from './cmp/Button.svelte';
 import Tabs from './cmp/Tabs.svelte';
 import Tab from './cmp/Tab.svelte';
 import Card from './cmp/Card.svelte';
+import Tag from './cmp/Tag.svelte';
 
 export {
     Nav,
@@ -12,4 +13,5 @@ export {
     Button,
     Tabs, Tab,
     Card,
+    Tag,
 }
