@@ -29,5 +29,5 @@ export function getSections() {
 }
 
 export function getComponents() {
-	return document.filter(el => el[2] !== undefined).map(el => el[2]);
+	return document.filter(el => el[2] !== undefined).map(el => { return {slug: el[1], component: el[2]} });
 }
