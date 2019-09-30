@@ -10,6 +10,7 @@ import Details from './cmp/Details.svelte';
 import Input from './cmp/Input.svelte';
 import Field from './cmp/Field.svelte';
 import Radio from './cmp/Radio.svelte';
+import Checkbox from './cmp/Checkbox.svelte';
 
 export {
     Nav,
@@ -22,4 +23,5 @@ export {
     Input,
     Field,
     Radio,
+    Checkbox,
 }

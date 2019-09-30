@@ -1,11 +1,13 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Input,Field,Button, Radio} from './../../../index';
+    import {Input,Field,Button, Radio, Checkbox} from './../../../index';
     import { mdiMagnify,mdiFormatBold,mdiFormatItalic, mdiFormatUnderline,mdiFormatColorFill } from '@mdi/js'; 
 
     let error = false;
     let radiovalue = 'second';
     let radiovalue2 = 'first';
+    let cbvalue = ['second'];
+    let cbvalue2 = [];
 </script>
 
 <h1>Form</h1>
@@ -136,7 +138,7 @@
     </Field>
 </Snippet>
 
-<h3>Radiobuttons</h3>
+<h3>Radiobutton</h3>
 
 <Snippet code={`
 <script>
@@ -145,11 +147,11 @@
 
 <Radio value="first" bind:group={radiovalue}/> - first,
 <Radio value="second" bind:group={radiovalue}/> - second
-<p>Selected radio: {radiovalue}</p>
+<p>Selected: {radiovalue}</p>
 `}>
     <Radio value="first" bind:group={radiovalue}/> - first,
     <Radio value="second" bind:group={radiovalue}/> - second
-    <p>Selected radio: {radiovalue}</p>
+    <p>Selected : {radiovalue}</p>
 </Snippet>
 
 <h4>Labeled radiobuttons</h4>
@@ -159,11 +161,43 @@
     let radiovalue = 'first';
 </script>
 
- <Radio value="first" bind:group={radiovalue}>First</Radio>
+<Radio value="first" bind:group={radiovalue}>First</Radio>
 <Radio value="second" bind:group={radiovalue}>Second</Radio>
-<p>Selected radio: {radiovalue}</p>
+<p>Selected: {radiovalue}</p>
 `}>
     <Radio value="first" bind:group={radiovalue2}>First</Radio>
     <Radio value="second" bind:group={radiovalue2}>Second</Radio>
-    <p>Selected radio: {radiovalue2}</p>
+    <p>Selected : {radiovalue2}</p>
+</Snippet>
+
+<h3>Checkbox</h3>
+
+<Snippet code={`
+<script>
+    let cbvalue = ['second'];
+</script>
+
+<Checkbox value="first" bind:group={cbvalue}/> - first,
+<Checkbox value="second" bind:group={cbvalue}/> - second
+<p>Selected: {cbvalue}</p>
+`}>
+    <Checkbox value="first" bind:group={cbvalue}/> - first,
+    <Checkbox value="second" bind:group={cbvalue}/> - second
+    <p>Selected: {cbvalue}</p>
+</Snippet>
+
+<h4>Labeled checkbox</h4>
+
+<Snippet code={`
+<script>
+    let cbvalue = [];
+</script>
+
+<Checkbox value="first" bind:group={cbvalue}>First</Checkbox>
+<Checkbox value="second" bind:group={cbvalue}>Second</Checkbox>
+<p>Selected: {cbvalue}</p>
+`}>
+    <Checkbox value="first" bind:group={cbvalue2}>First</Checkbox>
+    <Checkbox value="second" bind:group={cbvalue2}>Second</Checkbox>
+    <p>Selected: {cbvalue2}</p>
 </Snippet>

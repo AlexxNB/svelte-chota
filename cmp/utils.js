@@ -8,3 +8,7 @@ export function getClassAttr() {
 
     return class_attr_ar.join(' ');
 }
+
+export function isArray(obj) {
+    return Object.prototype.toString.call(obj) === '[object Array]'
+}
