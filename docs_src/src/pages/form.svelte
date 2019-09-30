@@ -1,6 +1,9 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Input} from './../../../index';
+    import {Input,Field,Button} from './../../../index';
+    import { mdiMagnify,mdiFormatBold,mdiFormatItalic, mdiFormatUnderline,mdiFormatColorFill } from '@mdi/js'; 
+
+    let error = false;
 </script>
 
 <h1>Form</h1>
@@ -35,4 +38,90 @@
     <p><Input error value="There is error"/></p>
     <p><Input success value="There is ok"/></p>
     <p><Input disabled value="Disabled"/></p>
+</Snippet>
+
+
+<h3>Field</h3>
+
+<Snippet code={`
+<Field label="Your name">
+    <Input value="Rich"/>
+</Field>
+
+<Field label="Username" success="User exists">
+    <Input value="admin"/>
+</Field>
+
+<Field label="Password" error="Wrong password">
+    <Input password value="admin"/>
+</Field>
+`}>
+    <Field label="Your name">
+        <Input value="Rich"/>
+    </Field>
+    <Field label="Username" success="User exists">
+        <Input value="admin"/>
+    </Field>
+    <Field label="Password" error="Wrong password">
+        <Input password value="admin"/>
+    </Field>
+</Snippet>
+
+<h3>Grouped</h3>
+
+<Snippet code={`
+<script>
+    let error = false;
+</script>
+
+<Field grouped {error}>
+    <Input placeholder="Username"/>
+    <Input password placeholder="Password"/>
+    <Button 
+        on:click={e=>error = (!!error) ? false : "Wrong credentials"}
+    >Login (Press me)</Button>
+</Field>
+`}>
+    <Field grouped {error}>
+        <Input placeholder="Username"/>
+        <Input password placeholder="Password"/>
+        <Button on:click={e=>error = (!!error) ? false : "Wrong credentials"}>Login (Press me)</Button>
+    </Field>
+</Snippet>
+
+<h3>Gapples</h3>
+
+<Snippet code={`
+<script>
+    import { mdiMagnify } from '@mdi/js'; 
+</script>
+
+<Field gapless>
+    <Input placeholder="Search"/>
+    <Button icon={mdiMagnify} primary/>
+</Field>
+`}>
+    <Field gapless>
+        <Input placeholder="Search"/>
+        <Button icon={mdiMagnify} primary/>
+    </Field>
+</Snippet>
+
+<Snippet code={`
+<script>
+    import { mdiMagnify } from '@mdi/js'; 
+</script>
+
+<Field gapless>
+    <Input placeholder="Search"/>
+    <Button icon={mdiMagnify} primary/>
+</Field>
+`}>
+    <Field gapless>
+        <Button icon={mdiFormatBold} outline/>
+        <Button icon={mdiFormatItalic} outline/>
+        <Button icon={mdiFormatUnderline} outline/>
+        <Button icon={mdiFormatColorFill} outline/>
+        <Input placeholder="Formated text here"/>
+    </Field>
 </Snippet>

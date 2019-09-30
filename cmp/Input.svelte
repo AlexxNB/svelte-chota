@@ -1,5 +1,6 @@
 <script>
     import {getClassAttr} from './utils';
+    import {getContext} from 'svelte';
 	
     export let value = '';
     export let type = 'text';
@@ -22,6 +23,19 @@
 		value = e.target.value
 		$$props.value = value
 	}
+
+	let getState = getContext('field:state');
+	let state_unsubscribe = false;
+	if(getState) {
+		state_unsubscribe = getState.subscribe(state => {
+			if(state === 'error') 
+				error = true;
+			else if(state === 'success') 
+				success = true;
+			else
+				success = error = false;
+		});
+	}	
 	
 	$: classAttr = getClassAttr($$props.class);
 
@@ -47,6 +61,7 @@
 		on:input
 		on:focus
 		on:blur
+		on:click
 	/>
 {:else if type === 'range'}
 	<input type="range" 
@@ -61,6 +76,7 @@
 		on:input
 		on:focus
 		on:blur
+		on:click
 	/>
 {:else if type === 'textarea'}
 	<textarea
@@ -73,6 +89,7 @@
 		on:input
 		on:focus
 		on:blur
+		on:click
 	/>
 {:else}
 	<input type={type} 
@@ -85,6 +102,7 @@
 		on:input={onInput}
 		on:focus
 		on:blur
+		on:click
 	/>
 {/if}
 

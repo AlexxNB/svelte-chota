@@ -128,4 +128,8 @@
 .icon-only{
   padding:.75rem 1rem;
 }
+
+summary, button{
+  white-space: nowrap;
+}
 </style>
