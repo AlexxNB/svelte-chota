@@ -9,6 +9,7 @@ import Tag from './cmp/Tag.svelte';
 import Details from './cmp/Details.svelte';
 import Input from './cmp/Input.svelte';
 import Field from './cmp/Field.svelte';
+import Radio from './cmp/Radio.svelte';
 
 export {
     Nav,
@@ -20,4 +21,5 @@ export {
     Details,
     Input,
     Field,
+    Radio,
 }

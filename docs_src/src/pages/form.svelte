@@ -1,9 +1,11 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Input,Field,Button} from './../../../index';
+    import {Input,Field,Button, Radio} from './../../../index';
     import { mdiMagnify,mdiFormatBold,mdiFormatItalic, mdiFormatUnderline,mdiFormatColorFill } from '@mdi/js'; 
 
     let error = false;
+    let radiovalue = 'second';
+    let radiovalue2 = 'first';
 </script>
 
 <h1>Form</h1>
@@ -132,4 +134,36 @@
         <Button icon={mdiFormatColorFill} outline/>
         <Input placeholder="Formated text here"/>
     </Field>
+</Snippet>
+
+<h3>Radiobuttons</h3>
+
+<Snippet code={`
+<script>
+    let radiovalue = 'second';
+</script>
+
+<Radio value="first" bind:group={radiovalue}/> - first,
+<Radio value="second" bind:group={radiovalue}/> - second
+<p>Selected radio: {radiovalue}</p>
+`}>
+    <Radio value="first" bind:group={radiovalue}/> - first,
+    <Radio value="second" bind:group={radiovalue}/> - second
+    <p>Selected radio: {radiovalue}</p>
+</Snippet>
+
+<h4>Labeled radiobuttons</h4>
+
+<Snippet code={`
+<script>
+    let radiovalue = 'first';
+</script>
+
+ <Radio value="first" bind:group={radiovalue}>First</Radio>
+<Radio value="second" bind:group={radiovalue}>Second</Radio>
+<p>Selected radio: {radiovalue}</p>
+`}>
+    <Radio value="first" bind:group={radiovalue2}>First</Radio>
+    <Radio value="second" bind:group={radiovalue2}>Second</Radio>
+    <p>Selected radio: {radiovalue2}</p>
 </Snippet>
