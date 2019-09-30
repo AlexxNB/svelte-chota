@@ -5,9 +5,11 @@
 
     let error = false;
     let radiovalue = 'second';
-    let radiovalue2 = 'first';
+    let radiovalue2 = 'third';
     let cbvalue = ['second'];
     let cbvalue2 = [];
+
+    $:  console.log(radiovalue2);
 </script>
 
 <h1>Form</h1>
@@ -158,15 +160,17 @@
 
 <Snippet code={`
 <script>
-    let radiovalue = 'first';
+    let radiovalue;
 </script>
 
 <Radio value="first" bind:group={radiovalue}>First</Radio>
 <Radio value="second" bind:group={radiovalue}>Second</Radio>
+<Radio value="third" bind:group={radiovalue}>Third</Radio>
 <p>Selected: {radiovalue}</p>
 `}>
-    <Radio value="first" bind:group={radiovalue2}>First</Radio>
+    <Radio value="first"  bind:group={radiovalue2}>First</Radio>
     <Radio value="second" bind:group={radiovalue2}>Second</Radio>
+    <Radio value="third" bind:group={radiovalue2}>Third</Radio>
     <p>Selected : {radiovalue2}</p>
 </Snippet>
 
@@ -193,11 +197,11 @@
     let cbvalue = [];
 </script>
 
-<Checkbox value="first" bind:group={cbvalue}>First</Checkbox>
+<Checkbox value="first" checked bind:group={cbvalue}>First</Checkbox>
 <Checkbox value="second" bind:group={cbvalue}>Second</Checkbox>
 <p>Selected: {cbvalue}</p>
 `}>
-    <Checkbox value="first" bind:group={cbvalue2}>First</Checkbox>
+    <Checkbox value="first" checked bind:group={cbvalue2}>First</Checkbox>
     <Checkbox value="second" bind:group={cbvalue2}>Second</Checkbox>
     <p>Selected: {cbvalue2}</p>
 </Snippet>

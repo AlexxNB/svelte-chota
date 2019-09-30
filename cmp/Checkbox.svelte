@@ -9,10 +9,11 @@
 
 	$: classAttr = getClassAttr($$props.class);
 
-	function handleChange(e) {
+
+
+	function handleChange(on) {
 		if(!isArray(group)) group = [];
 		const idx = group.indexOf(value);
-		const on = e.srcElement.checked;
 		if (on && idx === -1) {
 			group.push(value);
 			group = group;
@@ -26,7 +27,7 @@
 		checked = (group.indexOf(value) !== -1);
 	} else checked = false;
 		
-	
+	if(checked) handleChange(checked);
 	
 	
 </script>
@@ -34,7 +35,7 @@
 {#if labeled}
 <label>
     <input class={classAttr} type="checkbox" 
-		on:change={handleChange}
+		on:change={e=>handleChange(e.srcElement.checked)}
 		on:change on:input
 		{checked}
 	/> 
@@ -42,7 +43,7 @@
 </label>
 {:else}
 <input class={classAttr} type="checkbox" 
-	on:change={handleChange}
+	on:change={e=>handleChange(e.srcElement.checked)}
     on:change on:input
 	{checked}
 /> 
