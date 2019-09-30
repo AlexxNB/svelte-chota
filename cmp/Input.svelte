@@ -106,3 +106,8 @@
 	/>
 {/if}
 
+<style>
+input[type=range]::-moz-range-track,input[type=range]::-webkit-slider-runnable-track {
+  background-color: var(--color-primary);
+}
+</style>

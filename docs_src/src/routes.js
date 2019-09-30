@@ -14,14 +14,14 @@ const document = [
 		['Why chota?','why_chota',Why_chota],
 		['Installation','install',Install],
 	['Components'],
-		['Nav','nav',Nav],
 		['Grid','grid',Grid],
 		['Buttons','buttons',Buttons],
+		['Form','form',Form],
+		['Nav','nav',Nav],
 		['Tabs','tabs',Tabs],
 		['Card','card',Card],
 		['Tag','tag',Tag],
 		['Details','details',Details],
-		['Form','form',Form],
 ];
 
 export function getSections() {

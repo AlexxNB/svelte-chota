@@ -28,7 +28,7 @@
     <p><Input textarea placeholder="Textarea"/></p>
 </Snippet>
 
-<h3>States</h3>
+<h4>States</h4>
 
 <Snippet code={`
 <p><Input error value="There is error"/></p>
@@ -67,7 +67,7 @@
     </Field>
 </Snippet>
 
-<h3>Grouped</h3>
+<h4>Grouped</h4>
 
 <Snippet code={`
 <script>
@@ -89,7 +89,7 @@
     </Field>
 </Snippet>
 
-<h3>Gapples</h3>
+<h4>Gapples</h4>
 
 <Snippet code={`
 <script>
@@ -109,12 +109,20 @@
 
 <Snippet code={`
 <script>
-    import { mdiMagnify } from '@mdi/js'; 
+    import { 
+        mdiFormatBold,
+        mdiFormatItalic, 
+        mdiFormatUnderline,
+        mdiFormatColorFill 
+    } from '@mdi/js'; 
 </script>
 
 <Field gapless>
-    <Input placeholder="Search"/>
-    <Button icon={mdiMagnify} primary/>
+    <Button icon={mdiFormatBold} outline/>
+    <Button icon={mdiFormatItalic} outline/>
+    <Button icon={mdiFormatUnderline} outline/>
+    <Button icon={mdiFormatColorFill} outline/>
+    <Input placeholder="Formated text here"/>
 </Field>
 `}>
     <Field gapless>
