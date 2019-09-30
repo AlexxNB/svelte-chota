@@ -8,6 +8,7 @@ import Card from './pages/card.svelte';
 import Tag from './pages/tag.svelte';
 import Details from './pages/details.svelte';
 import Form from './pages/form.svelte';
+import Modal from './pages/modal.svelte';
 
 const document = [
 	['Getting Started'],
@@ -22,6 +23,7 @@ const document = [
 		['Card','card',Card],
 		['Tag','tag',Tag],
 		['Details','details',Details],
+		['Modal','modal',Modal],
 ];
 
 export function getSections() {

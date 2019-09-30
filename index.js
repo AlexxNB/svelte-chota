@@ -11,6 +11,7 @@ import Input from './cmp/Input.svelte';
 import Field from './cmp/Field.svelte';
 import Radio from './cmp/Radio.svelte';
 import Checkbox from './cmp/Checkbox.svelte';
+import Modal from './cmp/Modal.svelte';
 
 export {
     Nav,
@@ -24,4 +25,5 @@ export {
     Field,
     Radio,
     Checkbox,
+    Modal,
 }
