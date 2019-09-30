@@ -3,7 +3,7 @@
 	export let value = '';
 	export let group = [];
 
-	let checked = false;
+	export let checked = false;
 
 	let labeled = $$props.hasOwnProperty('$$slots');
 
@@ -21,6 +21,14 @@
 			group = group;
 		}
 	}
+
+	$: if(isArray(group)) {
+		checked = (group.indexOf(value) !== -1);
+	} else checked = false;
+		
+	
+	
+	
 </script>
 
 {#if labeled}
