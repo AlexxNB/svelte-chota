@@ -8,8 +8,6 @@
     let radiovalue2 = 'third';
     let cbvalue = ['second'];
     let cbvalue2 = [];
-
-    $:  console.log(radiovalue2);
 </script>
 
 <h1>Form</h1>
@@ -204,4 +202,25 @@
     <Checkbox value="first" checked bind:group={cbvalue2}>First</Checkbox>
     <Checkbox value="second" bind:group={cbvalue2}>Second</Checkbox>
     <p>Selected: {cbvalue2}</p>
+</Snippet>
+
+
+<h3>Selects</h3>
+
+<p>Actualy selects doesn't have a component version. Just use as is.</p>
+
+<Snippet code={`
+<select>
+    <option disabled selected>Choose</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+</select>
+`}>
+    <select>
+        <option disabled selected>Choose</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
 </Snippet>
