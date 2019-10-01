@@ -1,10 +1,10 @@
 <script>
-    import {getSections} from './../routes';
+    import {routes} from './../routes';
 </script>
 <div>
     <ul>
-    {#each getSections() as item}
-        {#if item[1]}
+    {#each routes as item}
+        {#if !!item[1]}
             <li><a href="#{item[1]}">{item[0]}</a></li>
         {:else}
             <li>{item[0]}</li>

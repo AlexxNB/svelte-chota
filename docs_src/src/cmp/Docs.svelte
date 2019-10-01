@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-    import {getComponents} from './../routes';
+    import {routes} from './../routes';
     
     export let section = 'top';
     let scroll = 0;
@@ -19,10 +19,14 @@
 <svelte:window bind:scrollY={scroll}/>
 
 <div class="docs">
-{#each getComponents() as doc}
-    <span id="anchor_{doc.slug}"/>
-    <svelte:component this={doc.component}/>
-    <hr/>
+{#each routes as item}
+    {#if !!item[1]}
+        <span id="anchor_{item[1]}"/>
+        <svelte:component this={item[2]}/>
+        <hr/>
+    {:else}
+        <h1>{item[0]}</h1>
+    {/if}
 {/each}
 </div>
 
@@ -30,5 +34,7 @@
 .docs{
     padding: 20px;
 }
-
+h1{
+    color: var(--color-primary);
+}
 </style>

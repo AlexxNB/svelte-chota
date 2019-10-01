@@ -15,7 +15,7 @@ import Form from './pages/form.svelte';
 import Modal from './pages/modal.svelte';
 import Icon from './pages/icon.svelte';
 
-const document = [
+export const routes = [
 	['Getting Started'],
 		['Why chota?','why_chota',Why_chota],
 		['Installation','install',Install],
@@ -36,11 +36,3 @@ const document = [
 		['Modal','modal',Modal],
 		['Icon','icon',Icon],
 ];
-
-export function getSections() {
-	return document.map(el => [el[0],(el[1] !== undefined ? el[1] : false)]);
-}
-
-export function getComponents() {
-	return document.filter(el => el[2] !== undefined).map(el => { return {slug: el[1], component: el[2]} });
-}
