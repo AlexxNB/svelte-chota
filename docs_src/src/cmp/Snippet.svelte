@@ -14,12 +14,12 @@ $: hl_code = hljs.highlight(lang,code.trim());
 
 
 <Row>
-	<Col size="7">
+	<Col size="12" sizeLG="7">
 		<div class="result">
 			<slot></slot>
 		</div>
 	</Col>
-	<Col size="5">
+	<Col size="12" sizeLG="5">
 		<pre class="hljs">
 		{@html hl_code.value}
 		</pre>

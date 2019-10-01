@@ -20,7 +20,7 @@
     const hasSlot = ($$props.$$slots !== undefined);
 
     $: clIcon = ( (icon !== null || iconRight !== null) && hasSlot);
-    $: clIcononly = (icon !== null && !hasSlot);
+    $: clIcononly = (dropdown) ? (icon !== null && dropdown===true) : (icon !== null && !hasSlot);
 
     $: classAttr = getClassAttr('button',$$props.class);
 </script>
@@ -72,7 +72,7 @@
         on:click
     >
     {#if icon} <span class="lefticon"> <Icon path={icon} size="1.4"/> </span>{/if}
-      {dropdown}
+      {(dropdown !== true) ? dropdown : ''}
     {#if iconRight} <span class="righticon"> <Icon path={iconRight} size="1.4"/> </span>{/if}
     </summary>
     <Card><slot></slot></Card>
@@ -131,5 +131,9 @@
 
 summary, button{
   white-space: nowrap;
+}
+
+summary::-webkit-details-marker {
+  display:none;
 }
 </style>

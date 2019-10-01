@@ -14,11 +14,11 @@
 
         if(sizeMD)
         if (sizeMD >=1 && sizeMD <= 12)
-            list.push(`col-${size}-md`);
+            list.push(`col-${sizeMD}-md`);
 
         if(sizeLG)
         if (sizeLG >=1 && sizeLG <= 12)
-            list.push(`col-${size}-lg`);
+            list.push(`col-${sizeLG}-lg`);
         
         return list.join(' ');
     }
