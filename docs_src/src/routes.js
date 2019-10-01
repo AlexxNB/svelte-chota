@@ -13,6 +13,7 @@ import Tag from './pages/tag.svelte';
 import Details from './pages/details.svelte';
 import Form from './pages/form.svelte';
 import Modal from './pages/modal.svelte';
+import Icon from './pages/icon.svelte';
 
 const document = [
 	['Getting Started'],
@@ -33,6 +34,7 @@ const document = [
 		['Tag','tag',Tag],
 		['Details','details',Details],
 		['Modal','modal',Modal],
+		['Icon','icon',Icon],
 ];
 
 export function getSections() {

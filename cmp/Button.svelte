@@ -1,7 +1,7 @@
 <script>
     import {getClassAttr} from './utils';
     import Card from './Card.svelte';
-    import Icon from 'mdi-svelte';
+    import Icon from './Icon.svelte';
 
     export let outline = null;
     export let primary = null;
