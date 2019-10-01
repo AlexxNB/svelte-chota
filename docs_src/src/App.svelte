@@ -43,6 +43,7 @@
 		width:100%;
 		box-shadow: 0 0 15px -5px var(--color-svelte-dark);
 		background-color:#FFF;
+		z-index: 9999;
 	}
 
 	.sections {
