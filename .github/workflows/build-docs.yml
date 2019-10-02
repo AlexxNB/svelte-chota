@@ -21,9 +21,7 @@ jobs:
         node-version: 12.x
 
     - name: Build
-      run: cd docs_src
-      run: npm i
-      run: npm run build
+      run: cd docs_src && npm i && npm run build
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.4.0
