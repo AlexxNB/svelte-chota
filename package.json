@@ -27,7 +27,7 @@
     "mdi-svelte": "^1.0.2"
   },
   "description": "Svelte ui components based on Chota CSS framefork.",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexxNB/svelte-chota.git"
