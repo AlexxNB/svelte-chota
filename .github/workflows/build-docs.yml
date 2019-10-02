@@ -3,6 +3,7 @@ name: Build Documentation
 on:
   push:
     paths:
+      - '.github/workflows/build-docs.yml'
       - 'docs_src/*'
       - 'docs_src/*/*'
       - 'docs_src/*/*/*'
@@ -20,7 +21,7 @@ jobs:
         node-version: 12.x
 
     - name: Build
-      run: npm run docs-build
+      run: npm ci && npm run docs-build
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.4.0
