@@ -16,7 +16,9 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - name: Publishing on NPM
+      - name: Installing NPM deps
+        run: npm install
+      - name: Building & publishing on NPM
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
