@@ -3,7 +3,7 @@
   "main": "index.js",
   "scripts": {
     "docs-dev": "cd ./docs_src && npm run dev",
-    "docs-build": "cd ./docs_src && npm run build && cp -r ./public/* ./../docs/"
+    "docs-build": "cd ./docs_src && npm run build"
   },
   "devDependencies": {
     "svelte": "^3.12.1"
