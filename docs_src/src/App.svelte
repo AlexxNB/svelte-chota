@@ -1,13 +1,15 @@
 <script>
-	import {Nav,Row,Col,Button,Card} from './../../cmp/index';
+	import {Nav,Row,Col,Button,Card,Icon} from './../../cmp/index';
 	import Sections from './cmp/Sections.svelte';
 	import MobileSections from './cmp/MobileSections.svelte';
 	import Docs from './cmp/Docs.svelte';
-	import { mdiMenu } from '@mdi/js'; 
+	import { mdiMenu, mdiGithubCircle } from '@mdi/js'; 
 
 	let mobile = false;
 
 	let width = 1024;
+
+	let ghspin = false;
 
 	$: mobile = (width < 700);
 
@@ -58,7 +60,11 @@
 			</span>
 		</div>
 		
-		<div slot="right">Github</div>
+		<div slot="right">
+			<a class="github" href="https://github.com/alexxnb/svelte-chota" target="_blank">
+				<Icon path={mdiGithubCircle} size=2/>
+			</a>
+		</div>
 	</Nav>
 </div>
 
@@ -104,5 +110,9 @@
 
 	.dropdown{
 		position:absolute;
+	}
+
+	.github {
+		color:var(--color-primary);
 	}
 </style>
