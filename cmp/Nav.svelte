@@ -29,5 +29,13 @@
 <style>
 	nav{
 		width:100%;
+		flex-direction: row;
+	}
+
+	:global(.nav-left) {
+		justify-content: flex-start
+	}
+	:global(.nav-right) {
+		justify-content: flex-end
 	}
 </style>
