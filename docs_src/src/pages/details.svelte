@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Details,Button} from './../../../index';
+    import {Details,Button} from './../../../cmp/index';
 </script>
 
 <h1>Details</h1>

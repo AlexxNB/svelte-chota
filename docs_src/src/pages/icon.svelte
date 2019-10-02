@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Icon} from './../../../index';
+    import {Icon} from './../../../cmp/index';
     import { mdiCardsSpade,mdiCardsClub,mdiCardsDiamond,mdiCardsHeart } from '@mdi/js';
 
 </script>

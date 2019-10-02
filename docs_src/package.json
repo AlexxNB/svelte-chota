@@ -16,6 +16,7 @@
   "dependencies": {
     "@mdi/js": "^4.4.95",
     "chota": "^0.7.1",
+    "mdi-svelte": "^1.0.2",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {

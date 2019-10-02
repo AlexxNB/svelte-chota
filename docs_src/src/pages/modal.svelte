@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Button,Modal,Card} from './../../../index';
+    import {Button,Modal,Card} from './../../../cmp/index';
 
     let modal = false;
     let modal2 = false;

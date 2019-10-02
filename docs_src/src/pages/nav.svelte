@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Nav} from './../../../index';
+    import {Nav} from './../../../cmp/index';
 </script>
 
 <h1>Nav</h1>

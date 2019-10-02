@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Tabs,Tab} from './../../../index';
+    import {Tabs,Tab} from './../../../cmp/index';
 
     let active_tab = 0;
     let active_tab_2 = 'second';

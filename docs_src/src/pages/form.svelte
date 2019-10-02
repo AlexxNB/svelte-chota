@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Input,Field,Button, Radio, Checkbox} from './../../../index';
+    import {Input,Field,Button, Radio, Checkbox} from './../../../cmp/index';
     import { mdiMagnify,mdiFormatBold,mdiFormatItalic, mdiFormatUnderline,mdiFormatColorFill } from '@mdi/js'; 
 
     let error = false;

@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Tag} from './../../../index';
+    import {Tag} from './../../../cmp/index';
 </script>
 
 <h1>Tag</h1>

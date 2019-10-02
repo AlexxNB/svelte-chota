@@ -1,5 +1,5 @@
 <script>
-	import {Nav,Row,Col,Button,Card} from './../../index';
+	import {Nav,Row,Col,Button,Card} from './../../cmp/index';
 	import Sections from './cmp/Sections.svelte';
 	import MobileSections from './cmp/MobileSections.svelte';
 	import Docs from './cmp/Docs.svelte';

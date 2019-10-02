@@ -4,7 +4,7 @@ import xml_lang from 'highlight.js/lib/languages/xml';
 import js_lang from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('xml', xml_lang);
 hljs.registerLanguage('javascript', js_lang);
-import {Row,Col} from './../../../index';
+import {Row,Col} from './../../../cmp/index';
 
 export let code = '';
 export let lang = 'html';

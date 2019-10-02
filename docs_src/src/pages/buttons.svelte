@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Button,Tag,Row,Col} from './../../../index';
+    import {Button,Tag,Row,Col} from './../../../cmp/index';
 
     import { mdiDelete,mdiAccountPlus,mdiSend,mdiChevronDown } from '@mdi/js'; 
 </script>

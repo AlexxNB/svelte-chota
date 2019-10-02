@@ -1,7 +1,7 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Card} from './../../../index';
-    import {Button} from './../../../index';
+    import {Card} from './../../../cmp/index';
+    import {Button} from './../../../cmp/index';
 </script>
 
 <h1>Card</h1>

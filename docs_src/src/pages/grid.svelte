@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Row,Col} from './../../../index';
+    import {Row,Col} from './../../../cmp/index';
 </script>
 
 <h1>Grid</h1>
