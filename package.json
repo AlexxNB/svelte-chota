@@ -18,5 +18,20 @@
   ],
   "dependencies": {
     "mdi-svelte": "^1.0.2"
-  }
+  },
+  "description": "Svelte ui components based on Chota CSS framefork.",
+  "version": "1.0.0",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexxNB/svelte-chota.git"
+  },
+  "author": "Alexey Schebelev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexxNB/svelte-chota/issues"
+  },
+  "homepage": "https://github.com/AlexxNB/svelte-chota#readme"
 }
