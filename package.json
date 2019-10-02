@@ -12,8 +12,7 @@
     "svelte"
   ],
   "files": [
-    "src",
-    "index.mjs",
+    "cmp",
     "index.js"
   ],
   "dependencies": {
@@ -21,9 +20,6 @@
   },
   "description": "Svelte ui components based on Chota CSS framefork.",
   "version": "1.0.0",
-  "directories": {
-    "doc": "docs"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexxNB/svelte-chota.git"
