@@ -1,5 +1,6 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs'
 import pkg from './package.json';
 
 const name = pkg.name
@@ -10,11 +11,15 @@ const name = pkg.name
 export default {
 	input: 'cmp/index.js',
 	output: [
-		{ file: pkg.module, 'format': 'es' },
+		{ file: pkg.module, 'format': 'es', name },
 		{ file: pkg.main, 'format': 'umd', name }
 	],
 	plugins: [
-		svelte(),
-		resolve()
+		svelte({
+			dev: false,
+			hydratable: true
+		  }),
+		resolve(),
+		commonjs()
 	]
 };
