@@ -7,15 +7,13 @@ import postcss from 'rollup-plugin-postcss';
 
 const production = !process.env.ROLLUP_WATCH;
 
-const buildpath = production ?  './../docs/' : './public/';
-
 export default {
 	input: 'src/main.js',
 	output: {
 		sourcemap: !production,
 		format: 'iife',
 		name: 'app',
-		file: buildpath+'bundle.js'
+		file: './public/bundle.js'
 	},
 	plugins: [
 		svelte({

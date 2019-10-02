@@ -1,0 +1,30 @@
+name: Build Documentation
+
+on:
+  push:
+    paths:
+      - 'docs_src/*'
+      - 'docs_src/*/*'
+      - 'docs_src/*/*/*'
+      - 'docs_src/*/*/*/*'
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Build
+      run: npm run docs-build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.4.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./docs_src/public

@@ -21,9 +21,8 @@
   "scripts": {
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
-    "dev": "run-p copystatic start:dev autobuild",
+    "dev": "run-p start:dev autobuild",
     "start": "sirv ./../docs --single",
-    "start:dev": "sirv public --single --dev",
-    "copystatic": "cp -r ./../docs/fonts ./public/ && cp ./../docs/*.png ./public/ && cp ./../docs/*.html ./public/"
+    "start:dev": "sirv public --single --dev"
   }
 }
