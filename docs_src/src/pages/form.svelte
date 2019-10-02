@@ -71,27 +71,29 @@
     </Field>
 </Snippet>
 
-<h4>Grouped</h4>
+<div class="hide-xs">
+    <h4>Grouped</h4>
 
-<Snippet code={`
-<script>
-    let error = false;
-</script>
+    <Snippet code={`
+    <script>
+        let error = false;
+    </script>
 
-<Field grouped {error}>
-    <Input placeholder="Username"/>
-    <Input password placeholder="Password"/>
-    <Button 
-        on:click={e=>error = (!!error) ? false : "Wrong credentials"}
-    >Login (Press me)</Button>
-</Field>
-`}>
     <Field grouped {error}>
         <Input placeholder="Username"/>
         <Input password placeholder="Password"/>
-        <Button on:click={e=>error = (!!error) ? false : "Wrong credentials"}>Login (Press me)</Button>
+        <Button 
+            on:click={e=>error = (!!error) ? false : "Wrong credentials"}
+        >Login (Press me)</Button>
     </Field>
-</Snippet>
+    `}>
+        <Field grouped {error}>
+            <Input placeholder="Username"/>
+            <Input password placeholder="Password"/>
+            <Button on:click={e=>error = (!!error) ? false : "Wrong credentials"}>Login (Press me)</Button>
+        </Field>
+    </Snippet>
+</div>
 
 <h4>Gapples</h4>
 
@@ -116,8 +118,7 @@
     import { 
         mdiFormatBold,
         mdiFormatItalic, 
-        mdiFormatUnderline,
-        mdiFormatColorFill 
+        mdiFormatUnderline
     } from '@mdi/js'; 
 </script>
 
@@ -125,7 +126,6 @@
     <Button icon={mdiFormatBold} outline/>
     <Button icon={mdiFormatItalic} outline/>
     <Button icon={mdiFormatUnderline} outline/>
-    <Button icon={mdiFormatColorFill} outline/>
     <Input placeholder="Formated text here"/>
 </Field>
 `}>
@@ -133,7 +133,6 @@
         <Button icon={mdiFormatBold} outline/>
         <Button icon={mdiFormatItalic} outline/>
         <Button icon={mdiFormatUnderline} outline/>
-        <Button icon={mdiFormatColorFill} outline/>
         <Input placeholder="Formated text here"/>
     </Field>
 </Snippet>

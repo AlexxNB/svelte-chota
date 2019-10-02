@@ -77,6 +77,7 @@
 
 	.navleft{
 		white-space: nowrap;
+		padding-left: 0px;
 	}
 	.logo{
 		font-size: 3rem;
