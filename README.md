@@ -1,5 +1,5 @@
 # svelte-chota
-Svelte ui components based on Chota CSS framefork.
+Svelte UI kit based on Chota CSS framefork.
 
 ## Why chota?
 
@@ -10,7 +10,7 @@ So the [chota](https://jenil.github.io/chota/) is a super light-weight CSS frame
 [Svelte-chota](https://github.com/AlexxNB/svelte-chota) is UI kit for easy using [chota](https://jenil.github.io/chota/) in your [Svelte](https://svelte.dev) projects.
 
 ## Documentation
-* Svelte-chota [documentation](https://alexxnb.github.io/svelte-chota/docs).
+* Svelte-chota [documentation](https://alexxnb.github.io/svelte-chota).
 * chota [documentation](https://jenil.github.io/chota/).
 
 ## Installation
