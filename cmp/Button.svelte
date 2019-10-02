@@ -52,7 +52,7 @@
 </button>
 {:else}
   <details class="dropdown">
-    <summary  
+    <summary
         class="{classAttr}"
 
         class:outline

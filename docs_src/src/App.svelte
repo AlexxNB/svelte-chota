@@ -1,5 +1,5 @@
 <script>
-	import {Nav,Row,Col,Button} from './../../index';
+	import {Nav,Row,Col,Button,Card} from './../../index';
 	import Sections from './cmp/Sections.svelte';
 	import MobileSections from './cmp/MobileSections.svelte';
 	import Docs from './cmp/Docs.svelte';
@@ -10,7 +10,27 @@
 	let width = 1024;
 
 	$: mobile = (width < 700);
+
+
+	let dropdown = false;
+	function handleDropdown(e) {
+		e.stopPropagation();
+		dropdown = !dropdown;
+
+		const handleWindow = () => {
+			if(dropdown) 
+			dropdown = false;
+			window.removeEventListener('click',handleWindow);
+		}
+		
+		if(dropdown) {
+			window.addEventListener('click',handleWindow);
+		}
+	}
 	
+	function handleSelection() {
+		dropdown = false;
+	}
 </script>
 
 <svelte:window bind:innerWidth={width}/>
@@ -24,9 +44,14 @@
 <div class="top"><Nav>
 		<div slot="left" class="navleft">
 			{#if mobile}
-				<Button icon={mdiMenu} clear dropdown>
-					<MobileSections/>
-				</Button>
+				<Button icon={mdiMenu} clear on:click={handleDropdown}/>
+				{#if dropdown}
+					<div class="dropdown" on:click|stopPropagation={handleSelection}>
+						<Card>
+							<MobileSections/>
+						</Card>
+					</div>
+				{/if}
 			{/if}
 			<span class="logo">
 				SVELTE<span class="text-light">-</span><span class="text-primary">chota</span>
@@ -75,5 +100,9 @@
 
 	.margin {
 		margin-left: var(--sections-width);
+	}
+
+	.dropdown{
+		position:absolute;
 	}
 </style>
