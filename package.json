@@ -1,21 +1,25 @@
 {
   "name": "svelte-chota",
-  "main": "index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
   "scripts": {
     "docs-dev": "cd ./docs_src && npm run dev",
-    "docs-build": "cd ./docs_src && npm run build"
-  },
-  "devDependencies": {
-    "svelte": "^3.12.1"
+    "docs-build": "cd ./docs_src && npm run build",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "svelte"
   ],
   "files": [
     "cmp",
-    "index.js"
+    "dist"
   ],
-  "dependencies": {
+  "devDependencies": {
+    "rollup": "^1.11.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-svelte": "^5.0.0",
+    "svelte": "^3.0.0",
     "mdi-svelte": "^1.0.2"
   },
   "description": "Svelte ui components based on Chota CSS framefork.",
