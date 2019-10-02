@@ -2,7 +2,7 @@
   "name": "svelte-chota",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
-  "svelte": "cmp/index.svelte",
+  "svelte": "cmp/index.js",
   "scripts": {
     "docs-dev": "cd ./docs_src && npm run dev",
     "docs-build": "cd ./docs_src && npm run build",
