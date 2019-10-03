@@ -45,19 +45,35 @@
 <div class="sections"><Sections/></div>
 {/if}
 
-<div class="top"><Nav>
-		<div slot="left" class="navleft">
-			{#if mobile}
-				<Button icon={mdiMenu} clear on:click={handleDropdown}/>
-				{#if dropdown}
-					<div class="dropdown" on:click|stopPropagation={handleSelection}>
-						<Card>
-							<MobileSections/>
-						</Card>
-					</div>
-				{/if}
+<div class="top">
+{#if mobile}
+	<Nav>
+		<div slot="left" class="burger">
+			<Button icon={mdiMenu} clear on:click={handleDropdown}/>
+			{#if dropdown}
+				<div class="dropdown" on:click|stopPropagation={handleSelection}>
+					<Card>
+						<MobileSections/>
+					</Card>
+				</div>
 			{/if}
-			<span class="logo">
+		</div>
+
+		<div slot="center">
+			<img src="favicon.png" alt="Logo"/>
+		</div>
+		
+		<div slot="right">
+			<a class="github" href="https://github.com/alexxnb/svelte-chota" target="_blank" 
+				on:mouseenter={e=>spin=true} on:mouseleave={e=>spin=false}>
+				<Icon path={mdiGithubCircle} size=2 {spin}/>
+			</a>
+		</div>
+	</Nav>
+{:else}
+	<Nav>
+		<div slot="left">
+			<span class="brand">
 				SVELTE<span class="text-light">-</span><span class="text-primary">chota</span>
 			</span>
 		</div>
@@ -69,6 +85,9 @@
 			</a>
 		</div>
 	</Nav>
+{/if}
+
+	
 </div>
 
 
@@ -78,12 +97,14 @@
 		--sections-width: 300px;
 	}
 
-	.navleft{
-		white-space: nowrap;
-		padding-left: 0px;
+	img{ 
+		margin-top: 10px;
+		width:32px;
+		height: 32px;
 	}
-	.logo{
-		font-size: 3rem;
+
+	.burger{
+		margin-top:7px;
 	}
 
 	.top { 
