@@ -33,6 +33,8 @@
 	function handleSelection() {
 		dropdown = false;
 	}
+
+	let spin =false;
 </script>
 
 <svelte:window bind:innerWidth={width}/>
@@ -61,8 +63,9 @@
 		</div>
 		
 		<div slot="right">
-			<a class="github" href="https://github.com/alexxnb/svelte-chota" target="_blank">
-				<Icon path={mdiGithubCircle} size=2/>
+			<a class="github" href="https://github.com/alexxnb/svelte-chota" target="_blank" 
+				on:mouseenter={e=>spin=true} on:mouseleave={e=>spin=false}>
+				<Icon path={mdiGithubCircle} size=2 {spin}/>
 			</a>
 		</div>
 	</Nav>

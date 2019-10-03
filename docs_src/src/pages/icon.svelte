@@ -8,7 +8,7 @@
 <h1>Icon</h1>
 
 <p><code>Icon</code> component is a wrapper for <a href="https://www.npmjs.com/package/mdi-svelte" target="_blank">mdi-svelte</a> package.</p>
-<p>You can view the full demo <a href="https://alexxnb.github.io/mdi-svelte/demo/dist/index.html" target="_blank">here</a>.</p>
+<p>You can view the full demo <a href="https://alexxnb.github.io/mdi-svelte" target="_blank">here</a>.</p>
 
 <p>You should put SVG-path into the <code>path</code> property. 
 There are a lot of icons packages which provide SVG-path for them. 
