@@ -64,3 +64,26 @@ export default {
 <p>Now you can import chota in the root <code>App.svelte</code> file</p>
 <p><i>Note: because you installed PostCSS plugin, now you can import any external css file same way.</i></p>
 </Snippet>
+
+<h2>Import from CDN</h2>
+<p>Another way to import chota without Rollup's config changing is using CDN. In this case internet connection required for users of your app.</p>
+
+<Snippet code={`
+npm install --save svelte-chota
+`}>
+
+1. Install <code>svelte-chota</code>
+
+</Snippet>
+
+<Snippet code={`
+<style>
+  @import "https://unpkg.com/chota@latest";
+</style>
+`}>
+
+2. Import styles from chota's CDN in the <code>style</code> block of the your <code>App.svelte</code>.
+
+</Snippet>
+
+<p><i>This way is ideal for using with sandboxes. See example on the <a href="https://svelte.dev/repl/23f96be8ef424e12b584f9ed00761e88?version=3.12.1" target="_blank">REPL</a></i></p>

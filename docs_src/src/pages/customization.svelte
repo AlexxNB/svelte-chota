@@ -6,7 +6,7 @@
 
 <p>The <a href="https://jenil.github.io/chota/" target="_blank">chota</a> is cutomizing by setting CSS variables. See <a href="https://jenil.github.io/chota/#customizing" target="_blank">official docs</a> for more info.</p>
 
-<Snippet code={`
+<Snippet  code={`
 <style>
     :global(:root) {
         --color-primary: #14854F;
