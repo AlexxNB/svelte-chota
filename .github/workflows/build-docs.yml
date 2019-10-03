@@ -8,6 +8,8 @@ on:
       - 'docs_src/*/*'
       - 'docs_src/*/*/*'
       - 'docs_src/*/*/*/*'
+      - 'cmp/*'
+      - 'cmp/*/*'
 
 jobs:
   docs-build-deploy:
