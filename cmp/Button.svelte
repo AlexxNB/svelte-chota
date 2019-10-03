@@ -46,9 +46,9 @@
 
     on:click
 >
-{#if icon} <span class="lefticon"> <Icon path={icon} size="1.4"/> </span>{/if}
+{#if icon} <span class="lefticon"> <Icon path={icon} size="24px"/> </span>{/if}
 <slot></slot>
-{#if iconRight} <span class="righticon"> <Icon path={iconRight} size="1.4"/> </span>{/if}
+{#if iconRight} <span class="righticon"> <Icon path={iconRight} size="24px"/> </span>{/if}
 </button>
 {:else}
   <details class="dropdown">
@@ -71,9 +71,9 @@
 
         on:click
     >
-    {#if icon} <span class="lefticon"> <Icon path={icon} size="1.4"/> </span>{/if}
+    {#if icon} <span class="lefticon"> <Icon path={icon} size="24px"/> </span>{/if}
       {(dropdown !== true) ? dropdown : ''}
-    {#if iconRight} <span class="righticon"> <Icon path={iconRight} size="1.4"/> </span>{/if}
+    {#if iconRight} <span class="righticon"> <Icon path={iconRight} size="24px"/> </span>{/if}
     </summary>
     <Card><slot></slot></Card>
   </details>
@@ -126,7 +126,7 @@
 
 
 .icon-only{
-  padding:.75rem 1rem;
+  padding:.55rem .8rem;
 }
 
 summary, button{
