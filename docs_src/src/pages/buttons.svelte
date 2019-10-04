@@ -43,6 +43,18 @@
     <Button clear>Clear</Button>
 </Snippet>
 
+<h3>Submit button</h3>
+
+<Snippet code={`
+<form>
+    <Button submit>Send form</Button>
+</form>
+`}>
+    <form action="#top">
+        <Button submit>Send form</Button>
+    </form>
+</Snippet>
+
 
 <h3>Icon buttons</h3>
 

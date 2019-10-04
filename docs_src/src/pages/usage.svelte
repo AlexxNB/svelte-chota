@@ -36,7 +36,7 @@
 >{button_text}</Button>
 `}>
 
-<Button 
+<Button
     on:mouseenter={ e => button_text="Don't touch me!" }
     on:mouseleave={ e => button_text="Ok, hover me again" }
 >{button_text}</Button>

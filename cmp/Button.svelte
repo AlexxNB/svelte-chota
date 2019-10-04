@@ -15,6 +15,7 @@
     export let icon = null;
     export let iconRight = null;
     export let dropdown = false;
+    export let submit = false;
 
     const events = getEventsAction(current_component);
     const attrs = getAttributesAction(current_component,'button');
@@ -37,12 +38,13 @@
     class:success
     class:clear
     class:loading
-    
     class:icon={clIcon}
     class:icon-only={clIcononly}
 
     use:attrs={$$props}
     use:events
+
+    type={submit ? 'submit' : null}
 >
 {#if icon} <span class="lefticon"> <Icon path={icon} size="24px"/> </span>{/if}
 <slot></slot>
