@@ -53,6 +53,7 @@
 {:else}
   <details class="dropdown">
     <summary
+        class="button"
         class:outline
         class:primary
         class:secondary
