@@ -1,11 +1,36 @@
 <script>
-    import {routes} from './../routes';
+    import { routes } from './../routes';
+    import { mdiArrowRight } from '@mdi/js'; 
+    import { Icon } from './../../../cmp/index';
+
+    let section = getHash();
+
+
+    function hashHandler() {
+        section = getHash();
+    }
+
+    function getHash(){
+        return window.location.hash.replace('#','');
+    }
 </script>
+
+<svelte:window on:hashchange={hashHandler}/>
+
 <div>
     <ul>
     {#each routes as item}
         {#if !!item[1]}
+            {#if item[1] === section}
+            <li>
+                <span class="pull-right">
+                    <Icon path={mdiArrowRight} size=2/>
+                </span>
+                <a href="#{item[1]}" class="active">{item[0]}</a>
+            </li>
+            {:else}
             <li><a href="#{item[1]}">{item[0]}</a></li>
+            {/if}
         {:else}
             <li>{item[0]}</li>
         {/if}
@@ -40,6 +65,11 @@ li a{
 
 li a:hover{
     color: #FFF;
+}
+
+li a.active{
+    color: #FFF;
+    font-weight: bolder;
 }
 
 </style>

@@ -1,12 +1,30 @@
 <script>
     import {routes} from './../routes';
-    
+
+    function watchSection(node) {
+        const name = node.name;
+
+        const handler = () => {
+            const rect = node.getBoundingClientRect();            
+            if(rect.top > 0 && rect.top < 160) {
+                node.name = node.name+'masked';
+                window.location.hash = name;
+                node.name = name;
+            }
+        }
+
+        window.addEventListener('scroll',handler);
+
+        return {
+            destroy: () => window.removeEventListener('scroll',handler)
+        }
+    }
 </script>
 
 <div class="docs">
 {#each routes as item}
     {#if !!item[1]}
-        <a name="{item[1]}"/>
+        <a name="{item[1]}" use:watchSection/>
         <svelte:component this={item[2]}/>
         <hr/>
     {:else}
