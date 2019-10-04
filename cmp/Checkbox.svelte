@@ -1,5 +1,5 @@
 <script>
-	import {getClassAttr,isArray,getEventsAction} from './utils';
+	import {isArray,getEventsAction,getAttributesAction} from './utils';
 	import {current_component} from 'svelte/internal';
 
 	export let value = '';
@@ -7,10 +7,9 @@
 	export let checked = false;
 
 	const events = getEventsAction(current_component);
+	const attrs = getAttributesAction(current_component);
 
 	let labeled = $$props.hasOwnProperty('$$slots');
-
-	$: classAttr = getClassAttr($$props.class);
 
 
 
@@ -37,17 +36,17 @@
 
 {#if labeled}
 <label>
-    <input class={classAttr} type="checkbox" 
+    <input type="checkbox" 
 		on:change={e=>handleChange(e.srcElement.checked)}
-		use:events
+		use:events use:attrs={$$props}
 		{checked}
 	/> 
     <slot />
 </label>
 {:else}
-<input class={classAttr} type="checkbox" 
+<input type="checkbox" 
 	on:change={e=>handleChange(e.srcElement.checked)}
-    use:events
+    use:events use:attrs={$$props}
 	{checked}
 /> 
 {/if}

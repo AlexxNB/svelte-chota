@@ -1,17 +1,16 @@
 <script>
-	import {getClassAttr,getEventsAction} from './utils';
+	import {getEventsAction,getAttributesAction} from './utils';
 	import {current_component} from 'svelte/internal';
 
 	const events = getEventsAction(current_component);
+	const attrs = getAttributesAction(current_component);
 
     let is_left = ($$props.$$slots.left !== undefined);
     let is_center = ($$props.$$slots.center !== undefined);
 	let is_right = ($$props.$$slots.right !== undefined);
-	
-	$: classAttr = getClassAttr('nav',$$props.class);
 </script>
 
-<nav class="{classAttr}" use:events>
+<nav class="nav" use:events use:attrs={$$props}>
 {#if is_left}
 	<div class="nav-left">
 		<slot name="left"></slot>

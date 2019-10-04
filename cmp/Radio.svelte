@@ -1,5 +1,5 @@
 <script>
-	import {getClassAttr,getEventsAction} from './utils';
+	import {getEventsAction,getAttributesAction} from './utils';
 	import {onMount} from 'svelte';	
 	import {current_component} from 'svelte/internal';
 
@@ -7,34 +7,31 @@
 	export let group = '';
 
 	const events = getEventsAction(current_component);
-	
+	const attrs = getAttributesAction(current_component);
+
 	let checked = false;
 	let labeled = $$props.hasOwnProperty('$$slots');
-
-	$: classAttr = getClassAttr($$props.class);
 
 	function handleChange() {
 		group = value;
 	}
 	
 	$: checked = (group === value); 
-
-	
 </script>
 
 {#if labeled}
 <label>
-    <input class={classAttr} type="radio"
+    <input type="radio"
 		on:change={handleChange}
-		use:events
+		use:events	
 		{checked}
 	/> 
     <slot />
 </label>
 {:else}
-<input class={classAttr} type="radio"
+<input type="radio"
 	on:change={handleChange}
-	use:events
+	use:events use:attrs={$$props}
 	{checked}
 /> 
 {/if}

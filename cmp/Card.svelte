@@ -1,16 +1,15 @@
 <script>
-	import {getClassAttr,getEventsAction} from './utils';
+	import {getEventsAction,getAttributesAction} from './utils';
     import {current_component} from 'svelte/internal';
 
 	const events = getEventsAction(current_component);
+	const attrs = getAttributesAction(current_component);
 	
     let is_header = ($$props.$$slots.header !== undefined);
     let is_footer = ($$props.$$slots.footer !== undefined);
-	
-	$: classAttr = getClassAttr('card',$$props.class);
 </script>
 
-<div class="{classAttr}" use:events>
+<div class="card" use:events use:attrs={$$props}>
 {#if is_header}
 	<header>
     	<slot name="header"></slot>

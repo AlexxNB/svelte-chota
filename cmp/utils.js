@@ -1,14 +1,3 @@
-export function getClassAttr() {
-    let class_attr_ar = [];
-    for (let param of arguments) {
-        if(param !== undefined && param !== false) {
-            class_attr_ar.push(param);
-        }
-    }
-
-    return class_attr_ar.join(' ');
-}
-
 export function isArray(obj) {
     return Object.prototype.toString.call(obj) === '[object Array]'
 }
@@ -33,5 +22,70 @@ export function getEventsAction(component) {
             );
         }
       }
+    };
+}
+
+
+export function getAttributesAction(component) {
+
+    const isSet = (value) => {
+        return ( 
+            value !== undefined && 
+            value !== false &&
+            value !== null
+        )
+    }
+
+    const getArrayFromString = (value) => {
+        if(typeof value != 'string') return [];
+        return value.replace(/\s+/g, ' ').trim().split(' ');
+    }
+
+    return (node,mixed) => {
+        const props = component.$$.props;
+
+        const attributes = Object.keys(mixed).filter(name => props.indexOf(name) === -1);
+
+        
+        let lastClasslist = [];
+        const updateClasses = (list) => {
+            let currentClasslist = [];
+            if( isSet(list['class'])) currentClasslist = currentClasslist.concat(getArrayFromString(list['class']));
+
+            for(let i in lastClasslist) {
+                if(currentClasslist.indexOf(lastClasslist[i]) === -1) node.classList.remove(lastClasslist[i]);
+            }
+
+            for(let i in currentClasslist) {
+                if(lastClasslist.indexOf(currentClasslist[i]) === -1) node.classList.add(currentClasslist[i]);
+            }
+            
+            lastClasslist = currentClasslist;
+        }
+
+        const updateAttr = (list) => {
+            attributes.forEach(name => {
+                const value = list[name];
+                if(name === 'class') {
+                    updateClasses(list);
+                } else {
+                    if( isSet(value) )
+                        node.setAttribute(name, value);
+                    else
+                        node.removeAttribute(name);
+                }
+            });
+        }
+
+        updateAttr(mixed);
+
+        return {
+            update: (mixed) => updateAttr(mixed),
+            destroy: () => {
+                attributes.forEach(name => {
+                    node.removeAttribute(name);
+                });
+            }
+        }
     };
 }

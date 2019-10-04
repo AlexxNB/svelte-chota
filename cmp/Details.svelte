@@ -1,15 +1,14 @@
 <script>
-	import {getClassAttr,getEventsAction} from './utils';
+	import {getEventsAction,getAttributesAction} from './utils';
 	import {current_component} from 'svelte/internal';
 
 	export let dropdown = false;
 
 	const events = getEventsAction(current_component);
-	
-	$: classAttr = getClassAttr($$props.class);
+	const attrs = getAttributesAction(current_component);
 </script>
 
-<details class={classAttr} class:dropdown use:events>
+<details class:dropdown use:events use:attrs={$$props}>
 	<summary><slot name="summary"></slot></summary>
 	<slot></slot>
 </details>

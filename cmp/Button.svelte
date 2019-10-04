@@ -1,9 +1,6 @@
 <script>
-    import {getClassAttr,getEventsAction} from './utils';
+    import {getEventsAction,getAttributesAction} from './utils';
     import {current_component} from 'svelte/internal';
-
-    const events = getEventsAction(current_component);
-
     import Card from './Card.svelte';
     import Icon from './Icon.svelte';
 
@@ -17,25 +14,21 @@
     export let loading = null;
     export let icon = null;
     export let iconRight = null;
-
     export let dropdown = false;
-    export let disabled = false;
 
+    const events = getEventsAction(current_component);
+    const attrs = getAttributesAction(current_component,'button');
 
     const hasSlot = ($$props.$$slots !== undefined);
 
     $: clIcon = ( (icon !== null || iconRight !== null) && hasSlot);
     $: clIcononly = (dropdown) ? (icon !== null && dropdown===true) : (icon !== null && !hasSlot);
-
-    $: classAttr = getClassAttr('button',$$props.class);
-
 </script>
 
 
 {#if dropdown === false}
 <button  
-    class="{classAttr}"
-
+    class="button"
     class:outline
     class:primary
     class:secondary
@@ -48,8 +41,7 @@
     class:icon={clIcon}
     class:icon-only={clIcononly}
 
-    {disabled}
-
+    use:attrs={$$props}
     use:events
 >
 {#if icon} <span class="lefticon"> <Icon path={icon} size="24px"/> </span>{/if}
@@ -59,8 +51,6 @@
 {:else}
   <details class="dropdown">
     <summary
-        class="{classAttr}"
-
         class:outline
         class:primary
         class:secondary
@@ -73,8 +63,7 @@
         class:icon={clIcon}
         class:icon-only={clIcononly}
 
-        {disabled}
-
+        use:attrs={$$props}
         use:events
     >
     {#if icon} <span class="lefticon"> <Icon path={icon} size="24px"/> </span>{/if}
