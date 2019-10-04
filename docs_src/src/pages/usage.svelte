@@ -1,6 +1,6 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Button} from './../../../cmp/index';
+    import {Button,Card} from './../../../cmp/index';
 
     let button_text = 'Hover me';
 </script>
@@ -40,5 +40,26 @@
     on:mouseenter={ e => button_text="Don't touch me!" }
     on:mouseleave={ e => button_text="Ok, hover me again" }
 >{button_text}</Button>
+
+</Snippet>
+
+
+<h3>Attributes</h3>
+
+<p>You can pass any attributes to the component, even the <code>class</code> attribute.</p>
+
+<Snippet code={`
+<script>
+    import {Card} from 'svelte-chota';
+</script>
+
+<Card class="is-rounded text-center" style="height:100px; width:100px" title="Hello">
+    <h1>Hey!</h1>
+</Card>
+`}>
+
+<Card class="is-rounded text-center" style="height:100px; width:100px" title="Hello">
+    <h1>Hey!</h1>
+</Card>
 
 </Snippet>
