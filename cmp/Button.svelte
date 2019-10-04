@@ -1,5 +1,9 @@
 <script>
-    import {getClassAttr} from './utils';
+    import {getClassAttr,getEventsAction} from './utils';
+    import {current_component} from 'svelte/internal';
+
+    const events = getEventsAction(current_component);
+
     import Card from './Card.svelte';
     import Icon from './Icon.svelte';
 
@@ -17,12 +21,14 @@
     export let dropdown = false;
     export let disabled = false;
 
+
     const hasSlot = ($$props.$$slots !== undefined);
 
     $: clIcon = ( (icon !== null || iconRight !== null) && hasSlot);
     $: clIcononly = (dropdown) ? (icon !== null && dropdown===true) : (icon !== null && !hasSlot);
 
     $: classAttr = getClassAttr('button',$$props.class);
+
 </script>
 
 
@@ -44,7 +50,7 @@
 
     {disabled}
 
-    on:click
+    use:events
 >
 {#if icon} <span class="lefticon"> <Icon path={icon} size="24px"/> </span>{/if}
 <slot></slot>
@@ -69,7 +75,7 @@
 
         {disabled}
 
-        on:click
+        use:events
     >
     {#if icon} <span class="lefticon"> <Icon path={icon} size="24px"/> </span>{/if}
       {(dropdown !== true) ? dropdown : ''}

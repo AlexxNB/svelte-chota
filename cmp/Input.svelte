@@ -1,6 +1,7 @@
 <script>
-    import {getClassAttr} from './utils';
-    import {getContext} from 'svelte';
+    import {getClassAttr,getEventsAction} from './utils';
+	import {getContext} from 'svelte';
+	import {current_component} from 'svelte/internal';
 	
     export let value = '';
     export let type = 'text';
@@ -19,7 +20,9 @@
 	export let min = null;
 	export let max = null;
 	
-	  const onInput = e => {
+	const events = getEventsAction(current_component);
+
+	const onInput = e => {
 		value = e.target.value
 		$$props.value = value
 	}
@@ -58,10 +61,8 @@
 		{max}
 		{placeholder}
 		{disabled}
-		on:input
-		on:focus
-		on:blur
-		on:click
+
+		use:events
 	/>
 {:else if type === 'range'}
 	<input type="range" 
@@ -73,10 +74,8 @@
 		{max}
 		{placeholder}
 		{disabled}
-		on:input
-		on:focus
-		on:blur
-		on:click
+
+		use:events
 	/>
 {:else if type === 'textarea'}
 	<textarea
@@ -86,10 +85,8 @@
 		{placeholder}
 		{disabled}
 		bind:value
-		on:input
-		on:focus
-		on:blur
-		on:click
+		
+		use:events
 	/>
 {:else}
 	<input type={type} 
@@ -100,9 +97,7 @@
 		{disabled}
 		{value}
 		on:input={onInput}
-		on:focus
-		on:blur
-		on:click
+		use:events
 	/>
 {/if}
 

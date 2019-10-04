@@ -1,20 +1,23 @@
 <script>
-import {getClassAttr} from './utils';
-import {fade} from 'svelte/transition';
+    import {getClassAttr,getEventsAction} from './utils';
+    import {fade} from 'svelte/transition';
+    import {current_component} from 'svelte/internal';
+    
+    export let active = false;
 
-export let active = false;
+    const events = getEventsAction(current_component);
 
-let is_header = ($$props.$$slots.header !== undefined);
-let is_footer = ($$props.$$slots.footer !== undefined);
+    let is_header = ($$props.$$slots.header !== undefined);
+    let is_footer = ($$props.$$slots.footer !== undefined);
 
-$: classAttr = getClassAttr('modal',$$props.class);
+    $: classAttr = getClassAttr('modal',$$props.class);
 </script>
 
 
 {#if active}
 <div class="container" transition:fade={{ duration: 200 }}>
     <div class="background" on:click={e => active=false}/>
-    <div class={classAttr}><slot></slot></div>
+    <div class={classAttr} use:events><slot></slot></div>
 </div>
 {/if}
 

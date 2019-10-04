@@ -1,9 +1,12 @@
 <script>
-    import {getClassAttr} from './utils';
+    import {getClassAttr,getEventsAction} from './utils';
+    import {current_component} from 'svelte/internal';
 
     export let size=false;
     export let sizeMD=false;
     export let sizeLG=false;
+
+    const events = getEventsAction(current_component);
 
     function get_col_classes(d,md,lg) {
         let list = [];
@@ -26,6 +29,6 @@
     $: classAttr = getClassAttr(get_col_classes(size,sizeMD,sizeLG),$$props.class);
 </script>
 
-<div class="{classAttr}">
+<div class="{classAttr}" use:events>
     <slot></slot>
 </div>
