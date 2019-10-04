@@ -61,7 +61,9 @@
 		</div>
 
 		<div slot="center">
-			<img src="favicon.png" alt="Logo"/>
+			<a href="#top">
+				<img src="favicon.png" alt="Logo"/>
+			</a>
 		</div>
 		
 		<div slot="right">
@@ -71,9 +73,9 @@
 {:else}
 	<Nav>
 		<div slot="left">
-			<span class="brand">
+			<a href="#top" class="brand">
 				SVELTE<span class="text-light">-</span><span class="text-primary">chota</span>
-			</span>
+			</a>
 		</div>
 		
 		<div slot="right">
@@ -93,7 +95,6 @@
 	}
 
 	img{ 
-		margin-top: 10px;
 		width:32px;
 		height: 32px;
 	}
