@@ -3,6 +3,7 @@
 	import Sections from './cmp/Sections.svelte';
 	import MobileSections from './cmp/MobileSections.svelte';
 	import Docs from './cmp/Docs.svelte';
+	import GithubLink from './cmp/GithubLink.svelte';
 	import { mdiMenu, mdiGithubCircle } from '@mdi/js'; 
 
 	let mobile = false;
@@ -64,10 +65,7 @@
 		</div>
 		
 		<div slot="right">
-			<a class="github" href="https://github.com/alexxnb/svelte-chota" target="_blank" 
-				on:mouseenter={e=>spin=true} on:mouseleave={e=>spin=false}>
-				<Icon path={mdiGithubCircle} size=2 {spin}/>
-			</a>
+			<GithubLink />
 		</div>
 	</Nav>
 {:else}
@@ -79,10 +77,7 @@
 		</div>
 		
 		<div slot="right">
-			<a class="github" href="https://github.com/alexxnb/svelte-chota" target="_blank" 
-				on:mouseenter={e=>spin=true} on:mouseleave={e=>spin=false}>
-				<Icon path={mdiGithubCircle} size=2 {spin}/>
-			</a>
+			<GithubLink animation/>
 		</div>
 	</Nav>
 {/if}
@@ -135,9 +130,5 @@
 
 	.dropdown{
 		position:absolute;
-	}
-
-	.github {
-		color:var(--color-primary);
 	}
 </style>
