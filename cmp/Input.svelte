@@ -20,8 +20,13 @@
 	const attrs = getAttributesAction(current_component);
 
 	const onInput = e => {
-		value = e.target.value
-		$$props.value = value
+		const type = e.target.type;
+		const val = e.target.value;
+
+		if(type === 'number' || type === 'range')
+			value = val === '' ? undefined : +val;
+		else
+			value = val;
 	}
 
 	let getState = getContext('field:state');
@@ -37,6 +42,7 @@
 		});
 	}	
 
+	
 	$: if(password) type = 'password';
 	$: if(number) type = 'number';
 	$: if(textarea) type = 'textarea';
@@ -45,39 +51,22 @@
 	$: if(range) type = 'range';
 </script>
 
-
-{#if type === 'number'}
-	<input type="number" 
-		class:error
-		class:success
-		bind:value
-		use:events
-		use:attrs={$$props}
-	/>
-{:else if type === 'range'}
-	<input type="range" 
-		class:error
-		class:success
-		bind:value
-		use:events
-		use:attrs={$$props}
-	/>
-{:else if type === 'textarea'}
+{#if type === 'textarea'}
 	<textarea
 		class:error 
 		class:success 
-		bind:value
-		
 		use:events
 		use:attrs={$$props}
-	/>
+		on:input={onInput}
+	>{value}</textarea>
 {:else}
 	<input type={type} 
 		class:error 
 		class:success 
-		on:input={onInput}
 		use:events
 		use:attrs={$$props}
+		on:input={onInput}
+		{value}
 	/>
 {/if}
 
