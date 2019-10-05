@@ -6,8 +6,6 @@
 	const attrs = getAttributesAction(current_component);
 
 	export let src = null;
-	export let path = null;
-	export let url = null;
 	export let size = 1;
 	export let color = null;
 	export let flipH = null;
@@ -15,14 +13,20 @@
 	export let rotate = 0;
 	export let spin = false;
 
+	let path = false;
+	let use = false;
+	let url = false;
 
 	//Icon source
 	$: if(!!src && src.toLowerCase().trim().endsWith('.svg')) {
-		path = false;
 		url = src;
+		path = use = false;
+	} else if(!!src && src.toLowerCase().trim().includes('.svg#')) {
+		use = src;
+		url = path = false;
 	} else if(!!src) {
 		path = src;
-		url = false;
+		url = use = false;
 	}
 
   // SPIN properties
@@ -71,6 +75,13 @@
 			style={(!!spin) ? `animation-duration: ${spintime}s` : undefined}
 		/>
 	</span>
+{:else if use}
+	<svg viewBox="0 0 24 24" {style} use:events use:attrs={$$props}>
+		<use xlink:href={use}
+			class:spinCW class:spinCCW 
+			style={(!!spin) ? `animation-duration: ${spintime}s` : undefined}
+		></use>
+	</svg>
 {:else}
 	<svg viewBox="0 0 24 24" {style} use:events use:attrs={$$props}>
 	{#if spin !== false}

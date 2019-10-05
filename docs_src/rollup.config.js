@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
+import svgicons from 'rollup-plugin-svg-icons'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -26,7 +27,10 @@ export default {
 			},*/
 			emitCss:true
 		}),
-		
+		svgicons({
+			inputFolder: './src/icons_for_sprite',
+			output: './public/icons/sprite.svg'
+		}),
 		postcss({
 			extract: true,
 			minimize: production,

@@ -19,7 +19,7 @@
 <h1>Icon</h1>
 
 <h3>Source</h3>
-<p>A <code>src</code> property can be either <i>SVG-path</i> or <i>SVG image's URL</i>.</p>
+<p>A <code>src</code> property can be either <i>SVG-path</i>, <i>SVG sprite URL with symbol ID</i> or <i>SVG image URL</i>.</p>
 <ul>
     <li><i>SVG-path</i> provided by many npm packages, 
         for example you can use the <a href="https://www.npmjs.com/package/@mdi/js" target="_blank">@mdi/js</a> 
@@ -27,7 +27,12 @@
         <a href="https://materialdesignicons.com/" target="_blank">materialdesignicons.com</a>. Or you can use your own SVG-path.
     </li>
 
-    <li><i>SVG image's URL</i> is a path to image which might be located in your assets or in any public libraries 
+    <li><i>SVG sprite URL with symbol ID</i> is a path to the SVG-sprite with specified symbol name. 
+    There are many tools to bundle single SVG-sprite file from many SVG images. 
+    For example, you can look on <a href="https://www.npmjs.com/package/rollup-plugin-svg-icons" target="_blank">rollup-plugin-svg-icons</a> package.
+    </li>
+
+    <li><i>SVG image's URL</i> is a path to an image which might be located in your assets or in any public libraries 
     like <a href="https://icongr.am/" target="_blank">icongr.am</a>.
     </li>
 </ul>
@@ -52,12 +57,13 @@
 <Icon src={jsicon} color="red" size="3"/>
 <Icon src={mdiLanguageJavascript} color="red" size="3"/>
 <Icon src="icons/javascript.svg" size="3" />
+<Icon src="icons/sprite.svg#javascript" size="3" color="green"/>
 <Icon src="https://icongr.am/material/language-javascript.svg" size="3" />
-
 `}>
     <Icon src={jsicon} color="red" size="3"/>
     <Icon src={mdiLanguageJavascript} color="orange" size="3"/>
     <Icon src="icons/javascript.svg" size="3" />
+    <Icon src="icons/sprite.svg#javascript" size="3" color="green"/>
     <Icon src="https://icongr.am/material/language-javascript.svg" size="3" />
 </Snippet>
 
