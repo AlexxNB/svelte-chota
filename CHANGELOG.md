@@ -1,5 +1,10 @@
 # Svelte-chota changelog
 
+## 1.5.0
+
+* Icons can be set from SVG sprites
+* remove property `path` from the Icons 
+
 ## 1.4.0
 
 * More powerful icon component
