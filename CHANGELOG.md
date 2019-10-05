@@ -1,5 +1,9 @@
 # Svelte-chota changelog
 
+## 1.4.0
+
+* More powerful icon component
+
 ## 1.3.0
 
 * Now you can add any atribute on the component

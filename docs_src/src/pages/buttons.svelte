@@ -58,7 +58,7 @@
 
 <h3>Icon buttons</h3>
 
-<p>Properties <code>icon</code> or <code>iconRight</code> accepts any SVG-path for icon. 
+<p>Properties <code>icon</code> or <code>iconRight</code> accepts any <a href="#icon">valid source</a> for icon. 
 As example, you can use <a target="_blank"  href="https://www.npmjs.com/package/@mdi/js">@mdi/js</a> package. But you are free to use any other.</p>
 
 <Snippet code={`
@@ -69,10 +69,12 @@ As example, you can use <a target="_blank"  href="https://www.npmjs.com/package/
 <Button primary icon={mdiAccountPlus}>Add User</Button>
 <Button outline primary iconRight={mdiSend}>Submit</Button>
 <Button error icon={mdiDelete} />
+<Button secondary class="is-rounded" icon="icons/svelte.svg" />
 `}>
     <Button primary icon={mdiAccountPlus}>Add User</Button>
     <Button outline primary iconRight={mdiSend}>Submit</Button>
     <Button error icon={mdiDelete} />
+    <Button secondary class="is-rounded" icon="icons/svelte.svg" />
 </Snippet>
 
 <h3>States</h3>

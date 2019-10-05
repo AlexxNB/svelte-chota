@@ -46,9 +46,9 @@
 
     type={submit ? 'submit' : null}
 >
-{#if icon} <span class="lefticon"> <Icon path={icon} size="24px"/> </span>{/if}
+{#if icon} <span class="lefticon"> <Icon src={icon} size="24px"/> </span>{/if}
 <slot></slot>
-{#if iconRight} <span class="righticon"> <Icon path={iconRight} size="24px"/> </span>{/if}
+{#if iconRight} <span class="righticon"> <Icon src={iconRight} size="24px"/> </span>{/if}
 </button>
 {:else}
   <details class="dropdown">
@@ -69,9 +69,9 @@
         use:attrs={$$props}
         use:events
     >
-    {#if icon} <span class="lefticon"> <Icon path={icon} size="24px"/> </span>{/if}
+    {#if icon} <span class="lefticon"> <Icon src={icon} size="24px"/> </span>{/if}
       {(dropdown !== true) ? dropdown : ''}
-    {#if iconRight} <span class="righticon"> <Icon path={iconRight} size="24px"/> </span>{/if}
+    {#if iconRight} <span class="righticon"> <Icon src={iconRight} size="24px"/> </span>{/if}
     </summary>
     <Card><slot></slot></Card>
   </details>
@@ -124,7 +124,7 @@
 
 
 .icon-only{
-  padding:.55rem .8rem;
+  padding:.5rem .65rem;
 }
 
 summary, button{
