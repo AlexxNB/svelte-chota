@@ -35,7 +35,7 @@
 
 <a class="github" href="https://github.com/alexxnb/svelte-chota" target="_blank" 
     on:mouseenter={mEnter} on:mouseleave={mLeave}>
-    <Icon path={mdiGithubCircle} size=2 rotate={$rotation * -1}/>
+    <Icon src={mdiGithubCircle} size=2 rotate={$rotation * -1}/>
     {#if hover}
     <span class="label" transition:slideLeft>Github</span>
     {/if}

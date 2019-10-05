@@ -28,7 +28,7 @@
     </li>
 
     <li><i>SVG sprite URL with symbol ID</i> is a path to the SVG-sprite with specified symbol name. 
-    There are many tools to bundle single SVG-sprite file from many SVG images. 
+    There are a lot of tools to bundle many SVG-files in a single SVG-sprite. 
     For example, you can look on <a href="https://www.npmjs.com/package/rollup-plugin-svg-icons" target="_blank">rollup-plugin-svg-icons</a> package.
     </li>
 
@@ -87,8 +87,8 @@
 
 
 <h3>Color</h3>
-<p><b>Note: a <code>color</code> property can be used when source is <i>SVG-path</i> only!</b></p>
-<p>By default color inhireted from curent text color. But you can specify the color providing CSS color value.</p>
+<p><b>Note: a <code>color</code> property can be used when source is <i>SVG-path</i> or <i>SVG sprite</i> only!</b></p>
+<p>By default, icon color inhireted from curent text color. But you can specify any color you want.</p>
 
 <Snippet code={`
 <script>
@@ -126,7 +126,7 @@
 
 
 <h3>Flip</h3>
-<p>You can flip icon vertically with <code>flipV</code> property or horizontally with <code>flipH</code>.</p>
+<p>You can flip icon vertically with <code>flipV</code> property or horizontally with <code>flipH</code> one.</p>
 
 <Snippet code={`
 <Icon src="icons/javascript.svg" size="2"/>

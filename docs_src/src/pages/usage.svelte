@@ -22,7 +22,7 @@
 
 <h3>Events handlers</h3>
 
-<p>You can use any <code>`on:eventname`</code> directive with almost any components.</p>
+<p>You can use any <code>`on:eventname`</code> directive with any components.</p>
 
 <Snippet code={`
 <script>

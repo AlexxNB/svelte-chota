@@ -3,15 +3,15 @@
 </script>
 <h1>Installation</h1>
 
-<p>Instruction is applieble for recommended <a href="https://github.com/sveltejs/template" target="_blank">template</a>.</p>
+<p>Instructions are applieble for recommended <a href="https://github.com/sveltejs/template" target="_blank">template</a>.</p>
 
 
-<h3>Install packages</h3>
+<h3>a. Import chota with Rollups's plugin</h3>
 <Snippet code={`
 npm install --save chota svelte-chota rollup-plugin-postcss
 `}>
 
-<p>You should install three packages:</p>
+<p>1. You should install three packages:</p>
 <ul>
     <li><code>chota</code> - css framework itself</li>
     <li><code>svelte-chota</code> - Svelte components for chota</li>
@@ -20,8 +20,6 @@ npm install --save chota svelte-chota rollup-plugin-postcss
 
 </Snippet>
 
-
-<h3>Rollup config</h3>
 <Snippet lang="javascript" code={`
 ...
 // import css plugin at the top of the file
@@ -49,23 +47,70 @@ export default {
     ]
 `}>
 
-<p>Open the <code>rollup.config.js</code> file and edit the config as shown.</p>
-<p>There we adding PostCSS plugin to pack all component's incapsulated CSS and imported CSS files in a single <code>bundle.css</code></p>
+<p>2. Open the <code>rollup.config.js</code> file and edit the config as shown. There we adding PostCSS plugin to pack all component's incapsulated CSS and imported CSS files in a single <code>bundle.css</code></p>
 </Snippet>
 
 
-<h3>Importing chota</h3>
 <Snippet code={`
 <script>
     import "chota";
 </script>
 `}>
 
-<p>Now you can import chota in the root <code>App.svelte</code> file</p>
+<p>3. Now you can import chota in the root <code>App.svelte</code> file</p>
 <p><i>Note: because you installed PostCSS plugin, now you can import any external css file same way.</i></p>
 </Snippet>
 
-<h2>Import from CDN</h2>
+<h3>b. Download chota CSS</h3>
+<p>Instead installing Rollup's plugin, you can just download <code>chota.css</code> and include it in your <code>index.html</code> file.</p>
+
+<Snippet code={`
+npm install --save svelte-chota
+`}>
+
+1. Install <code>svelte-chota</code>
+
+</Snippet>
+
+<Snippet lang="javascript" code={`
+// Svelte-template files
+svelte-template
+|-public
+|   |-chota.min.css //<- put it here
+|   |-favicon.png
+|   |-global.css
+|   |-index.html
+|  
+|-src    
+ 
+    
+
+`}>
+
+2. <a href="https://unpkg.com/chota@latest" target="_blank">Download</a> <code>chota.min.css</code> and place it near your <code>global.css</code> in the <code>public</code> directory. 
+</Snippet>
+
+
+<Snippet code={`
+<!-- index.html -->
+<html>
+    <head>
+     ...
+        <!-- Add iti above other styles-->
+        <link rel='stylesheet' href='chota.min.css'>   
+
+        <link rel='stylesheet' href='global.css'>   
+        <link rel='stylesheet' href='bundle.css'>   
+    </head>
+    ...
+`}>
+
+3. Add the link for the style into the <code>public/index.html</code> file above <code>global.css</code> and <code>bundle.css</code> links.
+</Snippet>
+
+
+
+<h3>c. Import from CDN</h3>
 <p>Another way to import chota without Rollup's config changing is using CDN. In this case internet connection required for users of your app.</p>
 
 <Snippet code={`
