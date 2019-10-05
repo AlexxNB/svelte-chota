@@ -139,10 +139,12 @@
 <p>If number is <i>positive</i> then icon will be spin clockwise, and contrclockwise if value is <i>negative</i></p>
 
 <Snippet code={`
-<Icon src="icons/javascript.svg" spin="5"/>
-<Icon src="icons/javascript.svg" spin/>
-<Icon src="icons/javascript.svg" flipV size="2"/>
-<Icon src="icons/javascript.svg" flipV flipH size="2"/>
+<Icon src="icons/svelte.svg" spin="-2" size="2"/>
+<Icon src="icons/svelte.svg" spin="-5" size="2"/>
+<Icon src="icons/svelte.svg" spin="-10" size="2"/>
+<Icon src="icons/svelte.svg" spin size="2"/>
+<Icon src="icons/svelte.svg" spin="1" size="2"/>
+<Icon src="icons/svelte.svg" spin="0.5" size="2"/>
 `}>
     <Icon src="icons/svelte.svg" spin="-2" size="2"/>
     <Icon src="icons/svelte.svg" spin="-5" size="2"/>
