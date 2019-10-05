@@ -24,7 +24,7 @@
             {#if item[1] === section}
             <li>
                 <span class="pull-right">
-                    <Icon path={mdiArrowRight} size=2/>
+                    <Icon src={mdiArrowRight} size=2/>
                 </span>
                 <a href="#{item[1]}" class="active">{item[0]}</a>
             </li>
