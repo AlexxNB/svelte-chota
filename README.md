@@ -1,5 +1,5 @@
 # svelte-chota
-Svelte UI kit based on Chota CSS framefork.
+Svelte UI components based on super lightweight [chota](https://jenil.github.io/chota/) CSS framework.
 
 [![npm](https://img.shields.io/npm/v/svelte-chota)](https://www.npmjs.com/package/svelte-chota)   [![npm](https://img.shields.io/npm/dt/svelte-chota)](https://www.npmjs.com/package/svelte-chota)    [![](https://github.com/AlexxNB/svelte-chota/workflows/Publish%20on%20NPM/badge.svg)](https://github.com/AlexxNB/svelte-chota/actions?workflow=Publish+on+NPM)    [![](https://github.com/AlexxNB/svelte-chota/workflows/Build%20Documentation/badge.svg)](https://github.com/AlexxNB/svelte-chota/actions?workflow=Build+Documentation)
 
