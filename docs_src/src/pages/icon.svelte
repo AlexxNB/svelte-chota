@@ -55,7 +55,7 @@
 </script>
 
 <Icon src={jsicon} color="red" size="3"/>
-<Icon src={mdiLanguageJavascript} color="red" size="3"/>
+<Icon src={mdiLanguageJavascript} color="orange" size="3"/>
 <Icon src="icons/javascript.svg" size="3" />
 <Icon src="icons/sprite.svg#javascript" size="3" color="green"/>
 <Icon src="https://icongr.am/material/language-javascript.svg" size="3" />
@@ -111,14 +111,14 @@
 <p>A <code>rotate</code> property is a number of degrees from -360 to 360.</p>
 
 <Snippet code={`
-<Icon src="icons/javascript.svg" rotate="-70"  size="2"/>
-<Icon src="icons/javascript.svg" rotate="-45"  size="2"/>
+<Icon src="icons/javascript.svg" rotate="-100"  size="2"/>
+<Icon src="icons/javascript.svg" rotate="-55"  size="2"/>
 <Icon src="icons/javascript.svg" rotate="0"  size="2"/>
 <Icon src="icons/javascript.svg" rotate="45"  size="2"/>
 <Icon src="icons/javascript.svg" rotate="70"  size="2"/>
 `}>
-    <Icon src="icons/javascript.svg" rotate="-70"  size="2"/>
-    <Icon src="icons/javascript.svg" rotate="-45"  size="2"/>
+    <Icon src="icons/javascript.svg" rotate="-100"  size="2"/>
+    <Icon src="icons/javascript.svg" rotate="-55"  size="2"/>
     <Icon src="icons/javascript.svg" rotate="0"  size="2"/>
     <Icon src="icons/javascript.svg" rotate="45"  size="2"/>
     <Icon src="icons/javascript.svg" rotate="70"  size="2"/>
