@@ -6,13 +6,14 @@
 <h1>Installation</h1>
 
 <p>
-    You have three ways to start working with <code>chota</code> and <code>svelte-chota</code>. Instructions are applieble for recommended <a href="https://github.com/sveltejs/template" target="_blank">template</a>.
+    You have three ways to start working with <code>chota</code> and <code>svelte-chota</code>. Instructions are applieble for official <a href="https://github.com/sveltejs/template" target="_blank">template</a>.
 </p>
 
 
 <Details open>
-    <h3 slot="summary" class="summary">a. Import chota with Rollups's plugin</h3>
-
+        <h3 slot="summary" class="summary">a. Import with Rollup plugin</h3>
+        <p slot="summary" class="comment">Recommended way</p>
+    
     <Snippet code={`
 npm install --save chota svelte-chota rollup-plugin-postcss
     `}>
@@ -71,6 +72,7 @@ export default {
 
 <Details>
     <h3 slot="summary" class="summary">b. Download chota CSS</h3>
+    <p slot="summary" class="comment">Easy way</p>
 
     <p>
         Instead installing Rollup's plugin, you can just download <code>chota.css</code> and include it in your <code>index.html</code> file.
@@ -121,6 +123,7 @@ svelte-template
 
 <Details>
     <h3 slot="summary" class="summary">c. Import from CDN</h3>
+    <p slot="summary" class="comment">The easiest way</p>
 
     <p>
         Another way to import chota without Rollup's config changing is using CDN. In this case internet connection required for users of your app.
@@ -152,5 +155,12 @@ npm install --save svelte-chota
 <style>
 .summary{
     display:inline-block;
+    margin:0px;
+    padding:0px;
+}
+.comment{
+    margin:-.8rem 0 1rem 4.2rem;
+    padding:0px;
+    color:var(--color-grey)
 }
 </style>
