@@ -15,6 +15,8 @@ So the [chota](https://jenil.github.io/chota/) is a super light-weight CSS frame
 
 ## Installation
 
+There are [three ways](https://alexxnb.github.io/svelte-chota/#install), how to start using svelte-chota. Recomendended one:
+
 ### Install packages
 You should install three packages:
 
@@ -44,7 +46,11 @@ export default {
         ...
         svelte({
             ...
-            // REPLACE 'css.write('public/bundle.css',!production);' BY 'emitCss:true'
+            // REPLACE
+            //   css: css => {
+            //      css.write('public/bundle.css');
+            //   }
+            // BY:
             emitCss:true
         }),
         // add the postccs plugin
@@ -83,3 +89,31 @@ Just import necessary components from the svelte-chota package in your component
 <Input placeholder="What you want?" /> <Button>Find</Button>
 ```
 
+### Events handlers
+
+You can use any `on:eventname` directive with any components:
+
+```html
+<script>
+    import {Button} from 'svelte-chota';
+    let button_text = 'Hover me';
+</script>
+
+<Button 
+    on:mouseenter={ e => button_text="Don't touch me!" }
+    on:mouseleave={ e => button_text="Ok, hover me again" }
+>{button_text}</Button>
+```
+### Attributes
+
+You can pass any attributes to the component, even the class attribute.
+
+```html
+<script>
+    import {Card} from 'svelte-chota';
+</script>
+
+<Card class="is-rounded text-center" style="height:100px; width:100px" title="Hello">
+    <h1>Hey!</h1>
+</Card>
+```

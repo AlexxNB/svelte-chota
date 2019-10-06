@@ -39,7 +39,11 @@ export default {
         ...
         svelte({
             ...
-            // replace 'css.write('public/bundle.css',!production);' by
+            // REPLACE
+            //   css: css => {
+            //      css.write('public/bundle.css');
+            //   }
+            // BY:
             emitCss:true
         }),
         // add the postccs plugin
