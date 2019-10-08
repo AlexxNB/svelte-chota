@@ -15,12 +15,47 @@
     export let icon = null;
     export let iconRight = null;
     export let dropdown = false;
+    export let open = false;
+    export let autoclose = false;
     export let submit = false;
 
     const events = getEventsAction(current_component);
     const attrs = getAttributesAction(current_component,'button');
 
     const hasSlot = ($$props.$$slots !== undefined);
+
+    function dropdownAction(node,param) {
+
+      let autoclose = param;
+      let button = node.getElementsByTagName('summary')[0];
+
+      const clickOutside = () => {
+        if(!!node.open) node.open=false;
+      }
+
+      const clickButton = (e) => {
+        e.stopPropagation();
+      }
+
+      const clickInDD = (e) => {
+        e.stopPropagation();
+        if(autoclose) node.open=false;
+      }
+
+      node.addEventListener('click',clickInDD);
+      button.addEventListener('click',clickButton);
+      window.addEventListener('click',clickOutside);
+
+
+      return {
+        update: param => autoclose = param,
+        destroy: () => {
+          window.removeEventListener('click',clickOutside);
+          node.removeEventListener('click',clickInDD);
+          button.removeEventListener('click',clickButton);
+        }
+      }
+    }
 
     $: clIcon = ( (icon !== null || iconRight !== null) && hasSlot);
     $: clIcononly = (dropdown) ? (icon !== null && dropdown===true) : (icon !== null && !hasSlot);
@@ -51,7 +86,7 @@
 {#if iconRight} <span class="righticon"> <Icon src={iconRight} size="24px"/> </span>{/if}
 </button>
 {:else}
-  <details class="dropdown">
+  <details class="dropdown" bind:open use:dropdownAction={autoclose}>
     <summary
         class="button"
         class:outline
@@ -73,7 +108,7 @@
       {(dropdown !== true) ? dropdown : ''}
     {#if iconRight} <span class="righticon"> <Icon src={iconRight} size="24px"/> </span>{/if}
     </summary>
-    <Card><slot></slot></Card>
+    <Card style="z-index:1"><slot></slot></Card>
   </details>
 {/if}
 

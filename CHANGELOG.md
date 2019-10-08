@@ -1,5 +1,9 @@
 # Svelte-chota changelog
 
+## 1.6.1
+
+* Enchanced dropdown button
+
 ## 1.6.0
 
 * Add Container component

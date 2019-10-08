@@ -1,8 +1,10 @@
 <script>
     import Snippet from './../cmp/Snippet.svelte';
-    import {Button,Tag,Row,Col} from './../../../cmp/index';
+    import {Button,Tag,Row,Col,Icon,Input} from './../../../cmp/index';
 
-    import { mdiDelete,mdiAccountPlus,mdiSend,mdiChevronDown } from '@mdi/js'; 
+    import { mdiDelete,mdiAccountPlus,mdiSend,mdiChevronDown,mdiWhiteBalanceSunny } from '@mdi/js'; 
+
+    let dropdown = false;
 </script>
 
 <h1>Buttons</h1>
@@ -95,43 +97,67 @@ As example, you can use <a target="_blank"  href="https://www.npmjs.com/package/
 <h3>Dropdown button</h3>
 
 <Snippet code={`
+<Button dropdown="Brightness" outline icon={mdiWhiteBalanceSunny}>
+    <Input range min="1" max="100" step="10" />
+</Button>
+`}>
+    <Button dropdown="Brightness" outline icon={mdiWhiteBalanceSunny}>
+        <Input range min="1" max="100" step="10" />
+    </Button>
+</Snippet>
+
+<h5>Autoclose</h5>
+<p>With the <code>autoclose</code> property dropdown will be closed when clicked inside it.</p> 
+
+<Snippet code={`
 <script>
     import { mdiChevronDown } from '@mdi/js';
 </script>
 
-<Button dropdown="My Profile" outline iconRight={mdiChevronDown}>
+<Button dropdown="My Profile" autoclose outline iconRight={mdiChevronDown}>
     <p><a href="/">Edit</a></p>
     <p><a href="/">Alerts&nbsp;<Tag>3</Tag></a></p>
     <hr>
     <p><a href="/" class="text-error">Logout</a></p>
 </Button>
+`}>
+    <Button dropdown="My Profile" autoclose  outline iconRight={mdiChevronDown}>
+        <p><a href="#1">Edit</a></p>
+        <p><a href="#2">Alerts&nbsp;<Tag>3</Tag></a></p>
+        <hr>
+        <p><a href="#3" class="text-error">Logout</a></p>
+    </Button>
+</Snippet>
 
-<Button dropdown="Login" outline>
+
+<h5>Open</h5>
+<p>The <code>open</code> property sets the state of the dropdown visibility.</p> 
+<Snippet code={`
+<script>
+    let open = false;
+    const close = () => open=false;
+</script>
+
+<Button dropdown="Login" bind:open outline>
     <Row>
         <Col size="12"><input placeholder="username"></Col>
         <Col size="12"><input placeholder="password" type="password"></Col>
-        <Col size="12" class="is-right">
-            <Button clear>Sign up</Button>
-            <Button primary>Sign in</Button>
+        <Col size="12">
+            <Button clear on:click={close}>Sign up</Button>
+            <Button primary on:click={close}>Sign in</Button>
         </Col>
     </Row>
 </Button>
 `}>
-    <Button dropdown="My Profile" outline iconRight={mdiChevronDown}>
-        <p><a href="/">Edit</a></p>
-        <p><a href="/">Alerts&nbsp;<Tag>3</Tag></a></p>
-        <hr>
-        <p><a href="/" class="text-error">Logout</a></p>
-    </Button>
-
-    <Button dropdown="Login" outline>
+    <Button dropdown="Login" bind:open={dropdown} outline>
         <Row>
             <Col size="12"><input placeholder="username"></Col>
             <Col size="12"><input placeholder="password" type="password"></Col>
-            <Col size="12" class="is-right">
-                <Button clear>Sign up</Button>
-                <Button primary>Sign in</Button>
+            <Col size="12">
+                <Button clear on:click={e=>dropdown=false}>Sign up</Button>
+                <Button primary on:click={e=>dropdown=false}>Sign in</Button>
             </Col>
         </Row>
     </Button>
 </Snippet>
+
