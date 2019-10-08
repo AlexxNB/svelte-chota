@@ -10,7 +10,12 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "svelte"
+    "svelte",
+    "chota",
+    "svelte ui kit",
+    "ui",
+    "ui kit",
+    "sveltejs"
   ],
   "files": [
     "cmp",
@@ -24,7 +29,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {},
-  "description": "Svelte ui components based on Chota CSS framefork.",
+  "description": "Svelte UI components based on super lightweight chota CSS framework.",
   "version": "1.6.0",
   "repository": {
     "type": "git",
@@ -35,5 +40,5 @@
   "bugs": {
     "url": "https://github.com/AlexxNB/svelte-chota/issues"
   },
-  "homepage": "https://github.com/AlexxNB/svelte-chota#readme"
+  "homepage": "https://alexxnb.github.io/svelte-chota"
 }
