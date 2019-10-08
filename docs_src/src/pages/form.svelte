@@ -95,7 +95,7 @@
     </Snippet>
 </div>
 
-<h4>Gapples</h4>
+<h4>Gapless</h4>
 
 <Snippet code={`
 <script>
