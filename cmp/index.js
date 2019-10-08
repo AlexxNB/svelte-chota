@@ -1,3 +1,4 @@
+import Container from './Container.svelte';
 import Nav from './Nav.svelte';
 import Row from './Row.svelte';
 import Col from './Col.svelte';
@@ -15,6 +16,7 @@ import Modal from './Modal.svelte';
 import Icon from './Icon.svelte';
 
 export {
+    Container,
     Nav,
     Row, Col,
     Button,

@@ -6,6 +6,7 @@ import Utilites from './pages/utilites.svelte';
 import Elements from './pages/elements.svelte';
 import Nav from './pages/nav.svelte';
 import Grid from './pages/grid.svelte';
+import Container from './pages/container.svelte';
 import Buttons from './pages/buttons.svelte';
 import Tabs from './pages/tabs.svelte';
 import Card from './pages/card.svelte';
@@ -25,6 +26,7 @@ export const routes = [
 		['Utilites','utilites',Utilites],
 		['Elements','elements',Elements],
 	['Components'],
+		['Container','container',Container],
 		['Grid','grid',Grid],
 		['Buttons','buttons',Buttons],
 		['Form','form',Form],
