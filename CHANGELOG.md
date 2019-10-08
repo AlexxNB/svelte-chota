@@ -1,5 +1,9 @@
 # Svelte-chota changelog
 
+## 1.6.0
+
+* Add Container component
+
 ## 1.5.0
 
 * Icons can be set from SVG sprites
