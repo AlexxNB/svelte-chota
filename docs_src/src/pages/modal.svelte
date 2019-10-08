@@ -10,18 +10,18 @@
 
 <Snippet code={`
 <script>
-    let modal = false;
+    let open = false;
 </script>
 
-<Button on:click={e => modal = true}>Show modal</Button>
-<Modal bind:active={modal}>
+<Button on:click={e => open=true}>Show modal</Button>
+<Modal bind:open>
     <Card>
         Hello, I am a simple modal.
     </Card>
 </Modal>
 `}>
     <Button on:click={e => modal = true}>Show modal</Button>
-    <Modal bind:active={modal}>
+    <Modal bind:open={modal}>
         <Card>
             Hello, I am a simple modal.
         </Card>
@@ -31,25 +31,27 @@
 
 <Snippet code={`
 <script>
-    let modal = false;
+    let open = false;
+    const show = () => open=true;
+    const hide = () => open=false;
 </script>
 
-<Button on:click={e => modal = true}>Show modal</Button>
-<Modal bind:active={modal}>
+<Button on:click={show}>Show modal</Button>
+<Modal bind:open>
     <Card>
         <h4 slot="header">Destroy the world</h4>
 
         <p>Are you sure?</p>
         
         <div slot="footer" class="is-right">
-            <Button clear on:click={e => modal = false}>Cancel</Button>
-            <Button primary on:click={e => modal = false}>Confirm</Button>
+            <Button clear on:click={hide}>Cancel</Button>
+            <Button primary on:click={hide}>Confirm</Button>
         </div>
     </Card>
 </Modal>
 `}>
     <Button on:click={e => modal2 = true}>Show modal</Button>
-    <Modal bind:active={modal2}>
+    <Modal bind:open={modal2}>
         <Card>
             <h4 slot="header">Destroy the world</h4>
 

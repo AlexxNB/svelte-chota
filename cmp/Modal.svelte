@@ -3,7 +3,7 @@
     import {fade} from 'svelte/transition';
     import {current_component} from 'svelte/internal';
     
-    export let active = false;
+    export let open = false;
 
     const events = getEventsAction(current_component);
     const attrs = getAttributesAction(current_component);
@@ -13,9 +13,9 @@
 </script>
 
 
-{#if active}
+{#if open}
 <div class="container" transition:fade={{ duration: 200 }}>
-    <div class="background" on:click={e => active=false}/>
+    <div class="background" on:click={e => open=false}/>
     <div class="modal" use:events use:attrs={$$props}><slot></slot></div>
 </div>
 {/if}
