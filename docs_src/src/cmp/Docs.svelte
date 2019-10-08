@@ -24,6 +24,7 @@
 <div class="docs">
 {#each routes as item}
     {#if !!item[1]}
+        <!-- svelte-ignore a11y-missing-attribute a11y-missing-content -->
         <a name="{item[1]}" use:watchSection/>
         <svelte:component this={item[2]}/>
         <hr/>
