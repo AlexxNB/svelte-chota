@@ -1,4 +1,4 @@
-import Why_chota from './pages/why_chota.svelte';
+import Why_chota from './pages/why_chota.md';
 import Install from './pages/install.svelte';
 import Usage from './pages/usage.svelte';
 import Customization from './pages/customization.svelte';
@@ -10,7 +10,7 @@ import Container from './pages/container.svelte';
 import Buttons from './pages/buttons.svelte';
 import Tabs from './pages/tabs.svelte';
 import Card from './pages/card.svelte';
-import Tag from './pages/tag.svelte';
+import Tag from './pages/tag.md';
 import Details from './pages/details.svelte';
 import Form from './pages/form.svelte';
 import Modal from './pages/modal.svelte';

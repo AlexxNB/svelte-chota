@@ -5,8 +5,15 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import svgicons from 'rollup-plugin-svg-icons'
+import {markdown} from 'svelte-preprocess-markdown'
+import {renderer} from './utils'
 
 const production = !process.env.ROLLUP_WATCH;
+
+
+
+
+
 
 export default {
 	input: 'src/main.js',
@@ -25,7 +32,11 @@ export default {
 			/*css: css => {
 				css.write('public/bundle.css',!production);
 			},*/
-			emitCss:true
+			emitCss:true,
+			extensions: ['.svelte','.md'],
+			preprocess: markdown({
+				renderer:renderer()
+			})
 		}),
 		svgicons({
 			inputFolder: './src/icons_for_sprite',
@@ -59,3 +70,5 @@ export default {
 		clearScreen: false
 	}
 };
+
+

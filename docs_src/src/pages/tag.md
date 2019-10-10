@@ -3,8 +3,9 @@
     import {Tag} from './../../../cmp/index';
 </script>
 
-<h1>Tag</h1>
+# Tag
 
+```html svelte
 <Snippet code={`
 <Tag>One</Tag>
 <Tag>Two</Tag>
@@ -18,3 +19,4 @@
     <Tag small>Small</Tag>
     <Tag large>Large</Tag>
 </Snippet>
+```
