@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import svgicons from 'rollup-plugin-svg-icons'
 import {markdown} from 'svelte-preprocess-markdown'
-import {renderer} from './utils'
+import {renderer,highlight} from './utils'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -35,7 +35,9 @@ export default {
 			emitCss:true,
 			extensions: ['.svelte','.md'],
 			preprocess: markdown({
-				renderer:renderer()
+				renderer:renderer(),
+				highlight,
+				langPrefix:'hljs language-'
 			})
 		}),
 		svgicons({

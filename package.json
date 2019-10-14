@@ -22,12 +22,12 @@
     "dist"
   ],
   "devDependencies": {
-    "rollup": "^1.11.0",
+    "rollup": "^1.23.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-svelte": "^5.0.0",
     "svelte": "^3.0.0",
-    "svelte-preprocess-markdown": "^1.0.0"
+    "svelte-preprocess-markdown": "^2.1.19"
   },
   "dependencies": {},
   "description": "Svelte UI components based on super lightweight chota CSS framework.",
