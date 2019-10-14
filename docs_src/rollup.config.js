@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import svgicons from 'rollup-plugin-svg-icons'
 import {markdown} from 'svelte-preprocess-markdown'
-import {renderer,highlight} from './utils'
+import {renderer,highlight,bugremover} from './utils'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -66,7 +66,10 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+
+		// Good idea to add idents to the <pre><code> block?!
+		production && bugremover(),
 	],
 	watch: {
 		clearScreen: false

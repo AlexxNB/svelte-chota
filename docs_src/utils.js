@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import {Renderer} from 'svelte-preprocess-markdown';
 import hljs from 'highlight.js/lib/highlight';
 import xml_lang from 'highlight.js/lib/languages/xml';
@@ -36,4 +38,18 @@ export function highlight(code, lang) {
     let result = hljs.highlight(lang,"\n"+code).value;
     result = result.replace(/<span class="(javascript|css)">/g,"$&&nbsp;");
     return result;
+}
+
+export function bugremover() {
+
+    const ident_remover = function(text) {
+        return text.replace(/(<code[^>]+>)\\n\\t\\t\\t/,'$1').replace(/\\t\\t\\t/g,'');
+    }
+
+    return {
+        name: 'rollup-plugin-svg-icons',
+        writeBundle: async (bundle) => {
+            fs.writeFileSync(path.resolve('./public/bundle.js'), bundle['bundle.js'].code.replace(/<pre>.+?<\/pre>/g,ident_remover));
+        }
+    }
 }
