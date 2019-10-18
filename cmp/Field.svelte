@@ -55,4 +55,8 @@ p{
 .message{
 	font-size: smaller;
 }
+
+.grouped:not(.gapless){
+	overflow-x: auto;
+}
 </style>
