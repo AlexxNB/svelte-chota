@@ -12,7 +12,8 @@
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-svg-icons": "^1.4.1",
     "rollup-plugin-terser": "^4.0.4",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "svelte-preprocess-markdown": "^2.3.0"
   },
   "dependencies": {
     "@mdi/js": "^4.5.95",
