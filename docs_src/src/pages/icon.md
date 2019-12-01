@@ -42,7 +42,7 @@ A `src` property can be either *SVG-path*, *SVG sprite URL with symbol ID* or *S
         ```html
         <script>
             import { mdiLanguageJavascript } from '@mdi/js';
-            const jsicon =\`M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,
+            const jsicon =`M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,
             19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,
             17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,
             17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,
@@ -53,7 +53,7 @@ A `src` property can be either *SVG-path*, *SVG sprite URL with symbol ID* or *S
             11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,
             15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,
             17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,
-            17.66 15.09,17.06L13.71,17.86Z\`;
+            17.66 15.09,17.06L13.71,17.86Z`;
         </script>
 
         <Icon src={jsicon} color="red" size="3"/>
