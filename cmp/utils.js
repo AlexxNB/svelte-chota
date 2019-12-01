@@ -44,7 +44,7 @@ export function getAttributesAction(component) {
     return (node,mixed) => {
         const props = component.$$.props;
 
-        const attributes = Object.keys(mixed).filter(name => props.indexOf(name) === -1);
+        const attributes = Object.keys(mixed).filter(name => props.name);
 
         
         let lastClasslist = [];
