@@ -1,0 +1,20 @@
+* Getting Started
+    - [Why chota?](why_chota)
+    - [Installation](install)
+    - [Usage](usage)
+* chota
+    - [Customization](customization)
+    - [Utilites](utilites)
+    - [Elements](elements)
+* Components
+    - [Container](components/container)
+    - [Grid](components/grid)
+    - [Buttons](components/buttons)
+    - [Form](components/form)
+    - [Nav](components/nav)
+    - [Tabs](components/tabs)
+    - [Card](components/card)
+    - [Tag](components/tag)
+    - [Details](components/details)
+    - [Modal](components/modal)
+    - [Icon](components/icon)

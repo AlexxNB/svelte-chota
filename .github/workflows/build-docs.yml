@@ -30,4 +30,4 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./docs_src/public
+        PUBLISH_DIR: ./docs_src/__DOCS__/dist/svelte-chota

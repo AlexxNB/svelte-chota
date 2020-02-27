@@ -1,0 +1,13 @@
+/* Styling of the examples view */
+
+@import 'chota/dist/chota.css';
+body{
+    padding: 1rem;
+}
+
+.col,
+[class*=" col-"],
+[class^='col-'] {
+    background-color: #40b3ff;
+    text-align: center;
+}

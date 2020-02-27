@@ -1,0 +1,16 @@
+/* Theme tunning: for full list ov variables visit the https://alexxnb.github.io/svelte-docs/theming */
+@import "./font.css";
+
+:root{
+
+    --primary: #14854F;
+    --font: 'Overpass',sans-serif
+}
+
+body{
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,strong,b{
+    font-weight: 500;
+}

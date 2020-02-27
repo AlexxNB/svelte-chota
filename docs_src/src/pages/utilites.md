@@ -49,3 +49,93 @@ The [chota](https://jenil.github.io/chota/) has very usefull css classes. You ca
 * `hide-md` - hides the element for screens &gt;=900px and &lt;1200px
 * `hide-lg` - hides the element for screens &gt;=1200px
 * `hide-pr` - hides the element for printing
+
+
+<style>
+
+ul{
+    --color-primary: #14854F;
+        --color-lightGrey: #d2d6dd;
+        --color-grey: #747681;
+        --color-darkGrey: #3f4144;
+        --color-error: #d43939;
+        --color-success: #28bd14;
+}
+
+/* Colors */
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-light {
+    background-color: var(--color-lightGrey) !important;
+}
+
+.bg-dark {
+    background-color: var(--color-darkGrey) !important;
+}
+
+.bg-grey {
+    background-color: var(--color-grey) !important;
+}
+
+.bg-error {
+    background-color: var(--color-error) !important;
+}
+
+.bg-success {
+    background-color: var(--color-success) !important;
+}
+
+.bd-primary {
+    border: 1px solid var(--color-primary) !important;
+}
+
+.bd-light {
+    border: 1px solid var(--color-lightGrey) !important;
+}
+
+.bd-dark {
+    border: 1px solid var(--color-darkGrey) !important;
+}
+
+.bd-grey {
+    border: 1px solid var(--color-grey) !important;
+}
+
+.bd-error {
+    border: 1px solid var(--color-error) !important;
+}
+
+.bd-success {
+    border: 1px solid var(--color-success) !important;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.text-light {
+    color: var(--color-lightGrey) !important;
+}
+
+.text-dark {
+    color: var(--color-darkGrey) !important;
+}
+
+.text-grey {
+    color: var(--color-grey) !important;
+}
+
+.text-error {
+    color: var(--color-error) !important;
+}
+
+.text-success {
+    color: var(--color-success) !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+</style>

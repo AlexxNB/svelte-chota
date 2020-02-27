@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url('static/overpass-400.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		url('static/overpass-600.woff2') format('woff2');
+}

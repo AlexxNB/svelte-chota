@@ -1,5 +1,5 @@
 <script>
-	import {Details} from './../../../cmp/index';
+	import {Details} from 'svelte-chota';
 	export let title = '';
 	export let comment = '';
 	export let open = false;
@@ -18,8 +18,8 @@
     padding:0px;
 }
 .comment{
-    margin:-.8rem 0 1rem 4.2rem;
+    margin:-.5rem 0 1rem 1rem;
     padding:0px;
-    color:var(--color-grey)
+    color:var(--secondary)
 }
 </style>
