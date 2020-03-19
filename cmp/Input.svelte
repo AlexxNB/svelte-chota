@@ -1,5 +1,5 @@
 <script>
-    import {getEventsAction,getAttributesAction} from './utils';
+    import {getEventsAction} from './utils';
 	import {getContext} from 'svelte';
 	import {current_component} from 'svelte/internal';
 	
@@ -17,7 +17,6 @@
 
 	
 	const events = getEventsAction(current_component);
-	const attrs = getAttributesAction(current_component);
 
 	const onInput = e => {
 		const type = e.target.type;
@@ -56,7 +55,7 @@
 		class:error 
 		class:success 
 		use:events
-		use:attrs={$$props}
+		{...$$restProps}
 		on:input={onInput}
 	>{value}</textarea>
 {:else}
@@ -64,7 +63,7 @@
 		class:error 
 		class:success 
 		use:events
-		use:attrs={$$props}
+		{...$$restProps}
 		on:input={onInput}
 		{value}
 	/>

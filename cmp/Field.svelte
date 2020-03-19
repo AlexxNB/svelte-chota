@@ -1,7 +1,7 @@
 <script>
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
-	import { getEventsAction,getAttributesAction } from './utils';
+	import { getEventsAction } from './utils';
 	import {current_component} from 'svelte/internal';
 	
 	export let label = false;
@@ -11,7 +11,6 @@
 	export let gapless = false;
 
 	const events = getEventsAction(current_component);
-	const attrs = getAttributesAction(current_component);
 
 	const state = writable('');
 	let message = false;
@@ -34,7 +33,7 @@
 		}
 </script>
 
-<div class:nomessage={!message} use:events use:attrs={$$props}>
+<div class:nomessage={!message} use:events {...$$restProps}>
 	{#if label}
 		<label>{label}</label>
 	{/if}

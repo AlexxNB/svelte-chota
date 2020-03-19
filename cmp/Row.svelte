@@ -1,13 +1,12 @@
 <script>
-    import {getEventsAction,getAttributesAction} from './utils';
+    import {getEventsAction} from './utils';
     import {current_component} from 'svelte/internal';
 
     export let reverse = false;
 
     const events = getEventsAction(current_component);
-    const attrs = getAttributesAction(current_component);
 </script>
 
-<div class="row" class:reverse use:events use:attrs={$$props}>
+<div class:row={1} class:reverse use:events {...$$restProps}>
     <slot></slot>
 </div>

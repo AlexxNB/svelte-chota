@@ -1,9 +1,8 @@
 <script>
-	import {getEventsAction,getAttributesAction} from './utils';
+	import {getEventsAction} from './utils';
 	import {current_component} from 'svelte/internal';
 
 	const events = getEventsAction(current_component);
-	const attrs = getAttributesAction(current_component);
 
 	export let src = null;
 	export let size = 1;
@@ -71,15 +70,15 @@
 </script>
 
 {#if url}
-	<span {style} use:events use:attrs={$$props}>
+	<span {style} use:events {...$$restProps}>
 		<img src="{url}" alt="" width="100%" height="100%" class:spinCW class:spinCCW style={aniStyle} />
 	</span>
 {:else if use}
-	<svg viewBox="0 0 24 24" {style} use:events use:attrs={$$props}>
+	<svg viewBox="0 0 24 24" {style} use:events {...$$restProps}>
 		<use xlink:href={use} class:spinCW class:spinCCW style={aniStyle}></use>
 	</svg>
 {:else}
-	<svg viewBox="0 0 24 24" {style} use:events use:attrs={$$props}>
+	<svg viewBox="0 0 24 24" {style} use:events {...$$restProps}>
 	{#if spin !== false}
 		<g class:spinCW class:spinCCW style={aniStyle}>
 			<path d={path}></path>

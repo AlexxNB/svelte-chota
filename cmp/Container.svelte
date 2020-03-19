@@ -1,9 +1,8 @@
 <script>
-	import {getEventsAction,getAttributesAction} from './utils';
+	import {getEventsAction} from './utils';
 	import {current_component} from 'svelte/internal';
 
 	const events = getEventsAction(current_component);
-	const attrs = getAttributesAction(current_component);
 </script>
 
-<div class="container" use:events use:attrs={$$props}><slot></slot></div>
+<div class:container={1} use:events {...$$restProps}><slot></slot></div>

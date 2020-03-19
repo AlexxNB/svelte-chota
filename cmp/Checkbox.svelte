@@ -1,5 +1,5 @@
 <script>
-	import {isArray,getEventsAction,getAttributesAction} from './utils';
+	import {isArray,getEventsAction} from './utils';
 	import {current_component} from 'svelte/internal';
 
 	export let value = '';
@@ -7,11 +7,8 @@
 	export let checked = false;
 
 	const events = getEventsAction(current_component);
-	const attrs = getAttributesAction(current_component);
 
 	let labeled = $$props.hasOwnProperty('$$slots');
-
-
 
 	function handleChange(on) {
 		if(!isArray(group)) group = [];
@@ -38,7 +35,8 @@
 <label>
     <input type="checkbox" 
 		on:change={e=>handleChange(e.srcElement.checked)}
-		use:events use:attrs={$$props}
+		use:events
+		{...$$restProps}
 		{checked}
 	/> 
     <slot />
@@ -46,7 +44,8 @@
 {:else}
 <input type="checkbox" 
 	on:change={e=>handleChange(e.srcElement.checked)}
-    use:events use:attrs={$$props}
+    use:events 
+	{...$$restProps}
 	{checked}
 /> 
 {/if}

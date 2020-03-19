@@ -1,5 +1,5 @@
 <script>
-    import {getEventsAction,getAttributesAction} from './utils';
+    import {getEventsAction} from './utils';
     import {current_component} from 'svelte/internal';
 
     export let size=false;
@@ -7,7 +7,6 @@
     export let sizeLG=false;
 
     const events = getEventsAction(current_component);
-    const attrs = getAttributesAction(current_component);
 
     function get_col_classes(d,md,lg) {
         let list = [];
@@ -27,9 +26,9 @@
         return list.join(' ');
     }
 
-    $: classes = get_col_classes(size,sizeMD,sizeLG);
+    $: classes = $$restProps.hasOwnProperty('class') ? $$restProps['class']+' '+get_col_classes(size,sizeMD,sizeLG) : get_col_classes(size,sizeMD,sizeLG);
 </script>
 
-<div class={classes} use:events use:attrs={$$props}>
+<div {...$$restProps} class={classes} use:events>
     <slot></slot>
 </div>

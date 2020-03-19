@@ -1,5 +1,5 @@
 <script>
-	import {getEventsAction,getAttributesAction} from './utils';
+	import {getEventsAction} from './utils';
 	import {onMount} from 'svelte';	
 	import {current_component} from 'svelte/internal';
 
@@ -7,7 +7,6 @@
 	export let group = '';
 
 	const events = getEventsAction(current_component);
-	const attrs = getAttributesAction(current_component);
 
 	let checked = false;
 	let labeled = $$props.hasOwnProperty('$$slots');
@@ -24,6 +23,7 @@
     <input type="radio"
 		on:change={handleChange}
 		use:events	
+		{...$$restProps}
 		{checked}
 	/> 
     <slot />
@@ -31,7 +31,8 @@
 {:else}
 <input type="radio"
 	on:change={handleChange}
-	use:events use:attrs={$$props}
+	use:events 
+	{...$$restProps}
 	{checked}
 /> 
 {/if}

@@ -1,5 +1,5 @@
 <script>
-    import {getEventsAction,getAttributesAction} from './utils';
+    import {getEventsAction} from './utils';
     import {current_component} from 'svelte/internal';
     import Card from './Card.svelte';
     import Icon from './Icon.svelte';
@@ -20,7 +20,6 @@
     export let submit = false;
 
     const events = getEventsAction(current_component);
-    const attrs = getAttributesAction(current_component,'button');
 
     const hasSlot = ($$props.$$slots !== undefined);
 
@@ -64,7 +63,7 @@
 
 {#if dropdown === false}
 <button  
-    class="button"
+    class:button={1}
     class:outline
     class:primary
     class:secondary
@@ -76,7 +75,7 @@
     class:icon={clIcon}
     class:icon-only={clIcononly}
 
-    use:attrs={$$props}
+    {...$$restProps}
     use:events
 
     type={submit ? 'submit' : null}
@@ -88,7 +87,7 @@
 {:else}
   <details class="dropdown" bind:open use:dropdownAction={autoclose}>
     <summary
-        class="button"
+        class:button={1}
         class:outline
         class:primary
         class:secondary
@@ -101,7 +100,7 @@
         class:icon={clIcon}
         class:icon-only={clIcononly}
 
-        use:attrs={$$props}
+        {...$$restProps}
         use:events
     >
     {#if icon} <span class="lefticon"> <Icon src={icon} size="24px"/> </span>{/if}
