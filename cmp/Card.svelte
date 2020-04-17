@@ -4,8 +4,8 @@
 
 	const events = getEventsAction(current_component);
 	
-    let is_header = ($$props.$$slots.header !== undefined);
-    let is_footer = ($$props.$$slots.footer !== undefined);
+    let is_header = $$props.$$slots && $$props.$$slots.header !== undefined;
+    let is_footer = $$props.$$slots && $$props.$$slots.footer !== undefined;
 </script>
 
 <div class:card={1} use:events {...$$restProps}>
