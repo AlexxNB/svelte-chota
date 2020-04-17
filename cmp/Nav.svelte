@@ -4,9 +4,9 @@
 
 	const events = getEventsAction(current_component);
 
-    let is_left = ($$props.$$slots.left !== undefined);
-    let is_center = ($$props.$$slots.center !== undefined);
-	let is_right = ($$props.$$slots.right !== undefined);
+    let is_left = $$props.$$slots && $$props.$$slots.left !== undefined;
+    let is_center = $$props.$$slots && $$props.$$slots.center !== undefined;
+	let is_right = $$props.$$slots && $$props.$$slots.right !== undefined;
 </script>
 
 <nav class:nav={1} use:events {...$$restProps}>

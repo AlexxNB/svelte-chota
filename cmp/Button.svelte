@@ -21,7 +21,7 @@
 
     const events = getEventsAction(current_component);
 
-    const hasSlot = ($$props.$$slots !== undefined);
+    const hasSlot = $$props.$$slots && $$props.$$slots !== undefined;
 
     function dropdownAction(node,param) {
 
