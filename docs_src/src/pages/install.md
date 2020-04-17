@@ -16,7 +16,7 @@ You have three ways to start working with `chota` and `svelte-chota`. Instructio
 * `rollup-plugin-postcss` - allows import css files inside your components and pack it in the bundle.
 
 ```shell
-$ npm install --save chota svelte-chota rollup-plugin-postcss
+$ npm install -D chota svelte-chota rollup-plugin-postcss
 ```
 
 2.&nbsp;Open the `rollup.config.js` file and edit the config as shown. There we adding *PostCSS* plugin to pack all component's incapsulated CSS and imported CSS files in a single `bundle.css`.
