@@ -27,7 +27,7 @@ You should install three packages:
 * `rollup-plugin-postcss` - allows import css files inside your components and pack it in the bundle.
 
 ```bash
-npm install --save-dev chota svelte-chota rollup-plugin-postcss
+npm install -D chota svelte-chota rollup-plugin-postcss
 ```
 
 ### Rollup config
