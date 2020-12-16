@@ -15,6 +15,8 @@
 	const state = writable('');
 	let message = false;
 
+	let slot_wrapper;
+
 	setContext('field:state',state);
 	
 	$: if(gapless) grouped = true;
@@ -35,9 +37,9 @@
 
 <div class:nomessage={!message} use:events {...$$restProps}>
 	{#if label}
-		<label>{label}</label>
+		<label for={slot_wrapper.id}>{label}</label>
 	{/if}
-	<p class:grouped class:gapless><slot/></p>
+	<p bind:this={slot_wrapper} class:grouped class:gapless><slot/></p>
 	{#if message}
 		<p class="message" class:text-error={error} class:text-success={success}>{message}</p>
 	{:else}
