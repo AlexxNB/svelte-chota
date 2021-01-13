@@ -28,7 +28,7 @@
   },
   "dependencies": {},
   "description": "Svelte UI components based on super lightweight chota CSS framework.",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexxNB/svelte-chota.git"
