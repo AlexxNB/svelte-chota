@@ -1,5 +1,5 @@
 {
-  "name": "svelte-chota-ablab",
+  "name": "svelte-chota",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "svelte": "cmp/index.js",
