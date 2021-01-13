@@ -6,7 +6,7 @@
   "scripts": {
     "docs-dev": "cd ./docs_src && npm run dev",
     "docs-build": "cd ./docs_src && npm run build",
-    "build": "rollup -c",
+    "build": "node esbuild",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -22,11 +22,9 @@
     "dist"
   ],
   "devDependencies": {
-    "rollup": "^1.27.6",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-svelte": "^5.1.1",
-    "svelte": "^3.20.1"
+    "esbuild": "^0.8.31",
+    "esbuild-svelte": "^0.4.0",
+    "svelte": "^3.31.2"
   },
   "dependencies": {},
   "description": "Svelte UI components based on super lightweight chota CSS framework.",

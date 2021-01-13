@@ -5,7 +5,6 @@
 	import {current_component} from 'svelte/internal';
 	
 	export let label = false;
-	export let labelAfter = false;
 	export let error = false;
 	export let success = false;
 	export let grouped = false;
@@ -36,18 +35,10 @@
 
 <div class:nomessage={!message} use:events {...$$restProps}>
 	{#if label}
-		<label>
-			<p class="label">{label}</p>
-			<p class:grouped class:gapless><slot/></p>
-		</label>
-	{:else if labelAfter}
-		<label>
-			<p class:grouped class:gapless><slot/></p>
-			<p class="label">{labelAfter}</p>
-		</label>
-	{:else}
-		<p class:grouped class:gapless><slot/></p>
+		<!-- svelte-ignore a11y-label-has-associated-control -->
+		<label>{label}</label>
 	{/if}
+	<p class:grouped class:gapless><slot/></p>
 	{#if message}
 		<p class="message" class:text-error={error} class:text-success={success}>{message}</p>
 	{:else}
