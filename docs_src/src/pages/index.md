@@ -8,7 +8,7 @@ layout: 'no_sidebar'
 </div>
 
 <div class="slogan">
-    UI components library for [Svelte](https://svelte.dev) built with tiny [chota.css](https://jenil.github.io/chota/)
+    UI component library for [Svelte](https://svelte.dev) built with tiny [chota.css](https://jenil.github.io/chota/)
 </div>
 
 <div class="links">

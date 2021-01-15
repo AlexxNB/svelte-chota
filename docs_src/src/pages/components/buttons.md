@@ -43,7 +43,7 @@
 
 ### Icon buttons
 
-Properties `icon` or `iconRight` accepts any [valid source](components/icon) for icon. For example, you may use [@mdi/js](https://www.npmjs.com/package/@mdi/js) package.
+The properties `icon` and `iconRight` accept any [valid source](components/icon) for an icon. For example, you may use the [@mdi/js](https://www.npmjs.com/package/@mdi/js) package.
 
 ```example
 <script>
@@ -85,7 +85,7 @@ Properties `icon` or `iconRight` accepts any [valid source](components/icon) for
 
 ##### Autoclose
 
-With the `autoclose` property dropdown will be closed when clicked inside it.
+With the `autoclose` property the dropdown will close when clicked inside it.
 
 ```example script:hide height:200
 <script>
@@ -102,7 +102,7 @@ With the `autoclose` property dropdown will be closed when clicked inside it.
 
 ##### Open
 
-The `open` property sets the state of the dropdown visibility.
+The `open` property sets the state of the dropdown's visibility.
 
 ```example height:230
 <script>

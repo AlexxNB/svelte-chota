@@ -1,15 +1,15 @@
 # svelte-chota
-Svelte UI components based on super lightweight [chota](https://jenil.github.io/chota/) CSS framework.
+Svelte UI components based on the super light-weight [chota](https://jenil.github.io/chota/) CSS framework.
 
 [![npm](https://img.shields.io/npm/v/svelte-chota)](https://www.npmjs.com/package/svelte-chota)   [![npm](https://img.shields.io/npm/dt/svelte-chota)](https://www.npmjs.com/package/svelte-chota)    [![](https://github.com/AlexxNB/svelte-chota/workflows/Publish%20on%20NPM/badge.svg)](https://github.com/AlexxNB/svelte-chota/actions?workflow=Publish+on+NPM)    [![](https://github.com/AlexxNB/svelte-chota/workflows/Build%20Documentation/badge.svg)](https://github.com/AlexxNB/svelte-chota/actions?workflow=Build+Documentation)
 
 ## Why chota?
 
-When you decides to use [Svelte](https://svelte.dev) in your projects, you expects very tiny bundles of result code.
+When you decide to use [Svelte](https://svelte.dev) in your projects, you expect very tiny bundles of code.
 
-So the [chota](https://jenil.github.io/chota/) is a super light-weight CSS framework, which will add only ~3kb of gzipped code to your CSS bundle.
+[chota](https://jenil.github.io/chota/) is a super light-weight CSS framework, which adds only ~3kb of gzipped code to your CSS bundle.
 
-[Svelte-chota](https://github.com/AlexxNB/svelte-chota) is UI kit for easy using [chota](https://jenil.github.io/chota/) in your [Svelte](https://svelte.dev) projects.
+[Svelte-chota](https://github.com/AlexxNB/svelte-chota) is a UI kit for easily using [chota](https://jenil.github.io/chota/) in your [Svelte](https://svelte.dev) projects.
 
 ## Documentation
 * Svelte-chota [documentation](https://alexxnb.github.io/svelte-chota).
@@ -17,14 +17,14 @@ So the [chota](https://jenil.github.io/chota/) is a super light-weight CSS frame
 
 ## Installation
 
-There are [three ways](https://alexxnb.github.io/svelte-chota/#install), how to start using svelte-chota. Recomendended one:
+There are [three ways](https://alexxnb.github.io/svelte-chota/#install) to start using svelte-chota. Recommended method:
 
 ### Install packages
 You should install three packages:
 
 * `chota` - css framework itself
 * `svelte-chota` - Svelte components for chota
-* `rollup-plugin-postcss` - allows import css files inside your components and pack it in the bundle.
+* `rollup-plugin-postcss` - allows you to import css files inside your components and then pack it in the bundle
 
 ```bash
 npm install -D chota svelte-chota rollup-plugin-postcss
@@ -65,7 +65,7 @@ export default {
     ]
 ```
 
-There we adding PostCSS plugin to pack all component's incapsulated CSS and imported CSS files in a single `bundle.css`
+Here we are adding PostCSS plugin to pack all components' incapsulated CSS and imported CSS files into a single `bundle.css`
 
 ### Importing chota
 
@@ -77,18 +77,18 @@ Now you can import `chota` in the your `App.svelte` file:
 </script>
 ```
 
-> Note: because you installed PostCSS plugin, now you can import any external css file same way.
+> Note: because you installed PostCSS plugin, you can now import any external css file the same way.
 
 ## Usage
 
-Just import necessary components from the svelte-chota package in your components:
+Just import the necessary components from the svelte-chota package in your components:
 
 ```html
 <script>
     import {Input,Button} from 'svelte-chota';
 </script>
 
-<Input placeholder="What you want?" /> <Button>Find</Button>
+<Input placeholder="What do you want?" /> <Button>Find</Button>
 ```
 
 ### Events handlers
@@ -108,7 +108,7 @@ You can use any `on:eventname` directive with any components:
 ```
 ### Attributes
 
-You can pass any attributes to the component, even the class attribute.
+Any attribute can be passed to the component, even the `class` attribute.
 
 ```html
 <script>

@@ -14,7 +14,7 @@
 
 ### open
 
-The `open` property allows details to be opened by default.
+The `open` property allows details to be open by default.
 
 ```example script:hide
 <script>
