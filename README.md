@@ -69,7 +69,7 @@ Here we are adding PostCSS plugin to pack all components' incapsulated CSS and i
 
 ### Importing chota
 
-Now you can import `chota` in the your `App.svelte` file:
+Now you can import `chota` in your `App.svelte` file:
 
 ```html
 <script>
