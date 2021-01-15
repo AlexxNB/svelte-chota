@@ -1,8 +1,8 @@
 # Customization
 
-The [chota](https://jenil.github.io/chota/) is cutomizing by setting CSS variables. See [official docs](https://jenil.github.io/chota/#customizing) for more info.
+[chota](https://jenil.github.io/chota/) is customized by setting CSS variables. See [official docs](https://jenil.github.io/chota/#customizing) for more info.
 
-You can set CSS variables in external _*.css_ file or inside `App.svelte` using `:global` modifier.
+You can set CSS variables in an external _*.css_ file or inside `App.svelte` using the `:global` modifier.
 
 ```svelte
 <style>

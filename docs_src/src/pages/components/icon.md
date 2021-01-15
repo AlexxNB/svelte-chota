@@ -2,11 +2,11 @@
 
 ### Source
 
-A `src` property can be either *SVG-path*, *SVG sprite URL with symbol ID* or *SVG image URL*.
+A `src` property can be either an *SVG-path*, *SVG sprite URL with symbol ID* or *SVG image URL*.
 
-* *SVG-path* provided by many npm packages, for example you can use the [@mdi/js](https://www.npmjs.com/package/@mdi/js)  and choose amoung hundreds of material icons on  [materialdesignicons.com](https://materialdesignicons.com/). Or you can use your own SVG-path.
+* *SVG-paths* are provided by many npm packages. For example you can use [@mdi/js](https://www.npmjs.com/package/@mdi/js) and choose from hundreds of material icons on [materialdesignicons.com](https://materialdesignicons.com/). Or you can use your own SVG-path.
 
-* *SVG sprite URL with symbol ID* is a path to the SVG-sprite with specified symbol name. There are a lot of tools to bundle many SVG-files in a single SVG-sprite. For example, you can look on [rollup-plugin-svg-icons](https://www.npmjs.com/package/rollup-plugin-svg-icons) package.
+* *SVG sprite URL with symbol ID* is a path to the SVG-sprite with a specified symbol name. There are a lot of tools to bundle many SVG-files in a single SVG-sprite. For example, you can look at the [rollup-plugin-svg-icons](https://www.npmjs.com/package/rollup-plugin-svg-icons) package.
 
 * *SVG image's URL* is a path to an image which might be located in your assets or in any public libraries 
     like [icongr.am](https://icongr.am/).
@@ -54,9 +54,9 @@ You can set the `size` property with a CSS-string like `36px` or just a multipli
 
 ### Color
 
-By default, icon color inhireted from curent text color. But you can specify any color you want.
+By default, icon color is inherited from the current text color. But you can specify any color you want.
 
-> **Note:** a `color` property can be used when source is *SVG-path* or *SVG sprite* only!
+> **Note:** a `color` property can only be used when the source is *SVG-path* or *SVG sprite*!
 
 ```example
 <script>
@@ -72,7 +72,7 @@ By default, icon color inhireted from curent text color. But you can specify any
 
 ### Rotate
 
-A `rotate` property is a number of degrees from -360 to 360.
+The `rotate` property is a number of degrees from -360 to 360.
 
 ```example script:hide
 <script>
@@ -88,7 +88,7 @@ A `rotate` property is a number of degrees from -360 to 360.
 
 ### Flip
 
-You can flip icon vertically with `flipV` property or horizontally with `flipH` one.
+You can flip an icon vertically with the `flipV` property or horizontally with `flipH`.
 
 ```example script:hide
 <script>
@@ -102,9 +102,9 @@ You can flip icon vertically with `flipV` property or horizontally with `flipH` 
 
 ### Spin
 
-It is possible to make spinning icon. The `spin` is a duration of the full turn in seconds. Default is 2 seconds. 
+It is possible to make a spinning icon. `spin` is the duration of the full turn in seconds. Default is 2 seconds. 
 
-If number is *positive* then icon will be spin clockwise, and contrclockwise if value is *negative*
+If the value is *positive* then the icon will spin clockwise, and counterclockwise if it is *negative*
 
 ```example script:hide
 <script>

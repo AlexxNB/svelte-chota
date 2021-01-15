@@ -16,9 +16,9 @@
 
 ### Size
 
-You can specify the size of the columns. Property `size` can be *from 1 to 12*.
+You can specify the size of the columns. The `size` property can be *from 1 to 12*.
 
-Each column's size speciefed after how many columns you want out of 12. So if you want 4 columns out of 12, use `size="4"`.
+Each column's size is specified by how many columns you want out of 12. So if you want 4 columns out of 12, use `size="4"`.
 
 ```example script:hide
 <script>
@@ -72,7 +72,7 @@ We now have responsive grids that work based on device width.
 
 You can use a combination of flexible and sized columns.
 
-When using a combination, the sized width column takes the size specified and the remaining is filled in by the flexible column.
+When using a combination, the sized column takes the space specified and the remaining space is filled by the flexible column.
 
  ```example script:hide
 <script>
@@ -99,12 +99,12 @@ When using a combination, the sized width column takes the size specified and th
 </Row>
 ```
 
-> **Pro tip:** Create equal-width columns that span multiple rows by inserting a `.is-full-width`(one of the [utility class](utilites)) where you want the columns to break to a new line.
+> **Pro tip:** Create equal-width columns that span multiple rows by inserting `.is-full-width` (one of the [utility class](utilites)) where you want the columns to break to a new line.
 
 
 ### Reverse Direction
 
-Add `reverse` property to the `Row` to reverse the column direction. 
+Add the `reverse` property to the `Row` to reverse the column direction. 
 
 ```example script:hide
 <script>

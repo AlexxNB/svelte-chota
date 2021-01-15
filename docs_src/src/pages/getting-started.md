@@ -1,6 +1,6 @@
 # About my component
 
-It is very cool button.
+It is a very cool button.
 
 ## Installation
 

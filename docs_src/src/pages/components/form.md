@@ -23,8 +23,8 @@
 <script>
  import {Input} from 'svelte-chota';
 </script>
-<p><Input error value="There is error"/></p>
-<p><Input success value="There is ok"/></p>
+<p><Input error value="There is an error"/></p>
+<p><Input success value="This is ok"/></p>
 <p><Input disabled value="Disabled"/></p>
 ```
 
@@ -155,7 +155,7 @@
 
 ### Selects
 
-Actualy selects doesn't have a component version. Just use as is.
+Native selects don't have a component version. Just use as is.
 
 ```example
 <select>

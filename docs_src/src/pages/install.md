@@ -2,7 +2,7 @@ import Details from '@INCLUDES/Details.svelte';
 
 # Installation
 
-You have three ways to start working with `chota` and `svelte-chota`. Instructions are applieble for official [template](https://github.com/sveltejs/template).
+There are three ways to start working with `chota` and `svelte-chota`. Instructions are applicable to the official [template](https://github.com/sveltejs/template).
 
 
 <Details title="a. Import with Rollup plugin"
@@ -13,13 +13,13 @@ You have three ways to start working with `chota` and `svelte-chota`. Instructio
 
 * `chota` - css framework itself
 * `svelte-chota` - Svelte components for chota
-* `rollup-plugin-postcss` - allows import css files inside your components and pack it in the bundle.
+* `rollup-plugin-postcss` - allows you to import css files inside your components and then pack it in the bundle
 
 ```shell
 $ npm install -D chota svelte-chota rollup-plugin-postcss
 ```
 
-2.&nbsp;Open the `rollup.config.js` file and edit the config as shown. There we adding *PostCSS* plugin to pack all component's incapsulated CSS and imported CSS files in a single `bundle.css`.
+2.&nbsp;Open the `rollup.config.js` file and edit the config as shown. Here we are adding *PostCSS* plugin to pack all components' incapsulated CSS and imported CSS files into a single `bundle.css`.
 
 ```js
 ...
@@ -61,7 +61,7 @@ export default {
     comment="Easy way"
 >
 
-Instead installing Rollup's plugin, you can just download `chota.css` and include it in your `index.html` file.
+Instead of installing Rollup's plugin, you can just download `chota.css` and include it in your `index.html` file.
 
 1.&nbsp;Install `svelte-chota`    
 
@@ -83,7 +83,7 @@ svelte-template
 |-src  
 ```
 
-3.&nbsp;Add the link for the style into the `public/index.html` file above `global.css` and `bundle.css` links.
+3.&nbsp;Add the link for the stylesheet in the `public/index.html` file above `global.css` and `bundle.css` links.
 
 ```html
 <!-- index.html -->
@@ -105,7 +105,7 @@ svelte-template
     comment="The easiest way"
 >
 
-Another way to import `chota` without Rollup's config changing is using CDN. In this case internet connection required for users of your app.
+Another way to import `chota` without changing Rollup's config is using a CDN. In this case an internet connection is required for users of your app.
 
 1.&nbsp;Install `svelte-chota`  
 
