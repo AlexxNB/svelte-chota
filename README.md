@@ -17,9 +17,6 @@ When you decide to use [Svelte](https://svelte.dev) in your projects, you expect
 
 ## Installation
 
-There are [two ways](https://alexxnb.github.io/svelte-chota/#install) to start using svelte-chota. Recommended method:
-
-### Install packages
 You should install two packages:
 
 * `chota` - css framework itself
@@ -29,9 +26,7 @@ You should install two packages:
 npm install -D chota svelte-chota
 ```
 
-### Rollup config
-
-Open the app root file (usually `App.svelte`) and add `chota` import at the top of a `<script>` block:
+Then open the app root file (usually `App.svelte`) and add `chota` import at the top of a `<script>` block:
 
 ```html
 <script>
