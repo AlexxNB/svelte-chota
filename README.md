@@ -17,67 +17,28 @@ When you decide to use [Svelte](https://svelte.dev) in your projects, you expect
 
 ## Installation
 
-There are [three ways](https://alexxnb.github.io/svelte-chota/#install) to start using svelte-chota. Recommended method:
+There are [two ways](https://alexxnb.github.io/svelte-chota/#install) to start using svelte-chota. Recommended method:
 
 ### Install packages
-You should install three packages:
+You should install two packages:
 
 * `chota` - css framework itself
 * `svelte-chota` - Svelte components for chota
-* `rollup-plugin-postcss` - allows you to import css files inside your components and then pack it in the bundle
 
 ```bash
-npm install -D chota svelte-chota rollup-plugin-postcss
+npm install -D chota svelte-chota
 ```
 
 ### Rollup config
 
-Open the `rollup.config.js` file and edit the config as shown:
-
-```javascript
-...
-// import postccs plugin at the top of the file
-import postcss from 'rollup-plugin-postcss';
-....
-
-const production = !process.env.ROLLUP_WATCH;
-
-export default {
-    ...
-    plugins: [  
-        ...
-        svelte({
-            ...
-            // REPLACE
-            //   css: css => {
-            //      css.write('public/bundle.css');
-            //   }
-            // BY:
-            emitCss:true
-        }),
-        // add the postccs plugin
-        postcss({
-			extract: true,
-			minimize: production,
-			sourceMap: !production
-		}),
-        ...
-    ]
-```
-
-Here we are adding PostCSS plugin to pack all components' incapsulated CSS and imported CSS files into a single `bundle.css`
-
-### Importing chota
-
-Now you can import `chota` in your `App.svelte` file:
+Open the app root file (usually `App.svelte`) and add `chota` import at the top of a `<script>` block:
 
 ```html
 <script>
-    import "chota";
+    import 'chota';
+    ...
 </script>
 ```
-
-> Note: because you installed PostCSS plugin, you can now import any external css file the same way.
 
 ## Usage
 
