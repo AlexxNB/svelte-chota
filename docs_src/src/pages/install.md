@@ -5,7 +5,7 @@ import Details from '@INCLUDES/Details.svelte';
 You have two ways to start working with `chota` and `svelte-chota`. Instructions are applieble for official [template](https://github.com/sveltejs/template).
 
 
-<Details title="a. Import with Rollup plugin"
+<Details title="a. Import CSS file in your root component"
     comment="Recommended way"
 >
 
