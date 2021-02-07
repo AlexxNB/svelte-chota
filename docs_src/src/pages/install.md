@@ -26,7 +26,9 @@ $ npm install -D chota svelte-chota
     ...
 </script>
 ```
+
 </Details>
+
 
 <Details
     title="c. Import from CDN"
