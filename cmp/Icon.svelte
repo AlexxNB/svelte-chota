@@ -1,8 +1,7 @@
 <script>
 	import {getEventsAction} from './utils';
-	import {current_component} from 'svelte/internal';
 
-	const events = getEventsAction(current_component);
+	const events = getEventsAction();
 
 	export let src = null;
 	export let size = 1;

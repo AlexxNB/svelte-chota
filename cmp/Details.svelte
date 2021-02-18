@@ -1,11 +1,10 @@
 <script>
 	import {getEventsAction} from './utils';
-	import {current_component} from 'svelte/internal';
 
 	export let dropdown = false;
 	export let open = false;
 
-	const events = getEventsAction(current_component);
+	const events = getEventsAction();
 </script>
 
 <details class:dropdown use:events {...$$restProps} bind:open>

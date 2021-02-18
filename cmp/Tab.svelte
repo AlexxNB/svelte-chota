@@ -1,11 +1,10 @@
 <script>
     import { getEventsAction } from './utils';
     import { getContext } from 'svelte';
-    import { current_component } from 'svelte/internal';
     
     export let tabid = false;
 
-    const events = getEventsAction(current_component);
+    const events = getEventsAction();
 
     const active_tab = getContext('tabs:active');
     const id = getContext('tabs:getid')();

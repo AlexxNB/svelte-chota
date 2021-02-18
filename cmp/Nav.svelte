@@ -1,8 +1,7 @@
 <script>
 	import {getEventsAction} from './utils';
-	import {current_component} from 'svelte/internal';
 
-	const events = getEventsAction(current_component);
+	const events = getEventsAction();
 
     let is_left = $$props.$$slots && $$props.$$slots.left !== undefined;
     let is_center = $$props.$$slots && $$props.$$slots.center !== undefined;

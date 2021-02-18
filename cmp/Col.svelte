@@ -1,12 +1,11 @@
 <script>
     import {getEventsAction} from './utils';
-    import {current_component} from 'svelte/internal';
 
     export let size=false;
     export let sizeMD=false;
     export let sizeLG=false;
 
-    const events = getEventsAction(current_component);
+    const events = getEventsAction();
 
     function get_col_classes(d,md,lg) {
         let list = [];

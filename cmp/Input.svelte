@@ -1,7 +1,6 @@
 <script>
     import {getEventsAction} from './utils';
 	import {getContext} from 'svelte';
-	import {current_component} from 'svelte/internal';
 	
     export let value = '';
     export let type = 'text';
@@ -16,7 +15,7 @@
 	export let range = false;
 
 	
-	const events = getEventsAction(current_component);
+	const events = getEventsAction();
 
 	const onInput = e => {
 		const type = e.target.type;

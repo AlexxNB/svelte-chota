@@ -3,8 +3,9 @@ export function isArray(obj) {
 }
 
 
-import {bubble, listen} from 'svelte/internal';
-export function getEventsAction(component) {
+import {bubble, listen,get_current_component} from 'svelte/internal';
+export function getEventsAction() {
+    const component = get_current_component();
     return node => {
       const events = Object.keys(component.$$.callbacks);
       const listeners = [];

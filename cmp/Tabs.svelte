@@ -2,12 +2,11 @@
     import {getEventsAction} from './utils';
     import { setContext } from 'svelte';
     import { writable } from 'svelte/store';
-    import {current_component} from 'svelte/internal';
 
     export let active = 0;
     export let full = false;
 
-    const events = getEventsAction(current_component);
+    const events = getEventsAction();
 
     const active_tab = writable(active);
     let num = 0;

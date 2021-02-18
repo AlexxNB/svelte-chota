@@ -2,7 +2,6 @@
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 	import { getEventsAction } from './utils';
-	import {current_component} from 'svelte/internal';
 	
 	export let label = false;
 	export let error = false;
@@ -10,7 +9,7 @@
 	export let grouped = false;
 	export let gapless = false;
 
-	const events = getEventsAction(current_component);
+	const events = getEventsAction();
 
 	const state = writable('');
 	let message = false;

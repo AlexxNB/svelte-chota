@@ -1,11 +1,10 @@
 <script>
     import {getEventsAction} from './utils';
     import {fade} from 'svelte/transition';
-    import {current_component} from 'svelte/internal';
     
     export let open = false;
 
-    const events = getEventsAction(current_component);
+    const events = getEventsAction();
 
     let is_header = $$props.$$slots && $$props.$$slots.header !== undefined;
     let is_footer = $$props.$$slots && $$props.$$slots.footer !== undefined;

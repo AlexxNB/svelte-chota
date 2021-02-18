@@ -1,6 +1,5 @@
 <script>
     import {getEventsAction} from './utils';
-    import {current_component} from 'svelte/internal';
     import Card from './Card.svelte';
     import Icon from './Icon.svelte';
 
@@ -19,7 +18,8 @@
     export let autoclose = false;
     export let submit = false;
 
-    const events = getEventsAction(current_component);
+
+    const events = getEventsAction();
 
     const hasSlot = $$props.$$slots && $$props.$$slots !== undefined;
 

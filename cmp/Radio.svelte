@@ -1,12 +1,10 @@
 <script>
 	import {getEventsAction} from './utils';
-	import {onMount} from 'svelte';	
-	import {current_component} from 'svelte/internal';
 
 	export let value = '';
 	export let group = '';
 
-	const events = getEventsAction(current_component);
+	const events = getEventsAction();
 
 	let checked = false;
 	let labeled = $$props.hasOwnProperty('$$slots');

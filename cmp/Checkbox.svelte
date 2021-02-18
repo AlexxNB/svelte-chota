@@ -1,12 +1,11 @@
 <script>
 	import {isArray,getEventsAction} from './utils';
-	import {current_component} from 'svelte/internal';
 
 	export let value = '';
 	export let group = [];
 	export let checked = false;
 
-	const events = getEventsAction(current_component);
+	const events = getEventsAction();
 
 	let labeled = $$props.hasOwnProperty('$$slots');
 
