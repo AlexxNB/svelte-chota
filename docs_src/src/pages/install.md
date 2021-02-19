@@ -39,7 +39,7 @@ Another way to import `chota` without Rollup's config changing is using CDN. In 
 
 1.&nbsp;Install `svelte-chota` for production:
 
-```terminal
+```shell
 $ npm install --save-prod svelte-chota
 ```
 
