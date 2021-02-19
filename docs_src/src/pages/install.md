@@ -14,7 +14,7 @@ You have two ways to start working with `chota` and `svelte-chota`. These instru
 * `chota` - css framework itself
 * `svelte-chota` - Svelte components for chota
 
-```terminal
+```shell
 $ npm install --save-dev chota svelte-chota
 ```
 
