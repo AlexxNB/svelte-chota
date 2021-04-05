@@ -6,8 +6,6 @@
 
     const events = getEventsAction();
 
-    let is_header = $$props.$$slots && $$props.$$slots.header !== undefined;
-    let is_footer = $$props.$$slots && $$props.$$slots.footer !== undefined;
 </script>
 
 
