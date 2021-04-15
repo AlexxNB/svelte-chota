@@ -78,7 +78,7 @@
     {...$$restProps}
     use:events
 
-    type={submit ? 'submit' : null}
+    type={submit ? 'submit' : 'button'}
 >
 {#if icon} <span class="lefticon"> <Icon src={icon} size="24px"/> </span>{/if}
 <slot></slot>
