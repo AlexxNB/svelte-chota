@@ -2,24 +2,20 @@
 	import {getEventsAction} from './utils';
 
 	const events = getEventsAction();
-
-    let is_left = $$props.$$slots && $$props.$$slots.left !== undefined;
-    let is_center = $$props.$$slots && $$props.$$slots.center !== undefined;
-	let is_right = $$props.$$slots && $$props.$$slots.right !== undefined;
 </script>
 
 <nav class:nav={1} use:events {...$$restProps}>
-{#if is_left}
+{#if $$slots.left}
 	<div class="nav-left">
 		<slot name="left"></slot>
 	</div>
 {/if}
-{#if is_center}
+{#if $$slots.center}
 	<div class="nav-center">
 		<slot name="center"></slot>
 	</div>
 {/if}
-{#if is_right}
+{#if $$slots.right}
 	<div class="nav-right">
 		<slot name="right"></slot>
 	</div>
