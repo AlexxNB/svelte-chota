@@ -11,7 +11,7 @@
 
 {#if open}
 <div class="container" transition:fade={{ duration: 200 }}>
-    <div class="background" on:click={e => open=false}/>
+    <div class="background" on:click={e => open=false} on:keyup={e => open=false}/>
     <div class:modal={1} use:events {...$$restProps}><slot></slot></div>
 </div>
 {/if}
