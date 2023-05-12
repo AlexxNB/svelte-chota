@@ -12,7 +12,9 @@ export function getEventsAction() {
 
       events.forEach(
           event => listeners.push(
-              listen(node, event, e =>  bubble(component, e))
+              listen(node, event, function(e) {
+                 bubble.call(this, component, e);
+              })
             )
         );
   
